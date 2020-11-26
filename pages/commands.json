@@ -1,0 +1,46 @@
+{
+    "categories": [
+        {"name": "General", "commands": [
+            {"name": "stats", "desc": "Check Growtopia Server Status, Time & WOTD"},
+            {"name": "notify", "desc": "Get notification immediately if Growtopia server goes up or down"},
+            {"name": "info <item name>", "desc": "Search item recipes or infos"},
+            {"name": "search <keyword>", "desc": "Get list of items matching with keyword"},
+            {"name": "render <world name>", "desc": "Showing specified world render"},
+            {"name": "wotd ", "desc": "View World Of The Day render"},
+            {"name": "image <item name>", "desc": "View Item sprite in 128x128 size"},
+            {"name": "ign <mention user OR your GrowID>", "desc": "Find/Set GrowID"},
+            {"name": "feedback <your message>", "desc": "Leave feedback/suggestion about Growtopian bot"},
+            {"name": "about ", "desc": "View information about bot"}
+        ]},
+        {"name": "Game", "commands": [
+            {"name": "donate ", "desc": "You will receive random amount of gems"},
+            {"name": "bfg", "desc": "Work at BFG and earn some gems"},
+            {"name": "profile <optional: username>", "desc": "View your inventory"},
+            {"name": "title <title ID>", "desc": "Change your title from titles you own"},
+            {"name": "top", "desc": "View Leaderboard"},
+            {"name": "store", "desc": "View Store"},
+            {"name": "quiz", "desc": "Take a quiz and win some gems"},
+            {"name": "dragstats ", "desc": "View your dragon status"},
+            {"name": "dragwar <@user/userid>", "desc": "Start dragonwar against someone with a dragon"},
+            {"name": "bonus", "desc": "Claim your reward every 24 hours"},
+            {"name": "quest ", "desc": "Get your daily quest and get 10,000 Gems"},
+            {"name": "petbattle <player name>", "desc": "Pet battle against a member, should have at least 3000 gems"},
+            {"name": "items ", "desc": "View items you own"},
+            {"name": "chest ", "desc": "Open Chest with cost of a WL"}
+            ]},
+        {"name": "Utility", "commands": [
+            {"name": "harvest <count> <item name>", "desc": "View amount of average block/seed drops from harvesting"},
+            {"name": "break <count> <item name>", "desc": "View amount of average block/seed drops from breaking"},
+            {"name": "xp <Current Level> <Target Level>", "desc": "Find XP Required to level up"}
+            ]},
+        {"name": "Administrative", "commands": [
+            {"name": "prefix <new prefix>", "desc": "Set custom prefix for your server"},
+            {"name": "settings ", "desc": "View Growtopian settings for the server"},
+            {"name": "blacklist <#channelname>", "desc": " Block commands executing at selected channels"},
+            {"name": "disable <category (game & general)>", "desc": "Toggle command categories to be usable at typed channels"},
+            {"name": "gm <#channel name> <text>", "desc": "Broadcast using bot at selected channel"},
+            {"name": "ban <user id/mention> <reason>", "desc": "Ban selected person"},
+            {"name": "unban <user ID>", "desc": "Remove selected user's ban"}
+            ]}
+    ]
+}

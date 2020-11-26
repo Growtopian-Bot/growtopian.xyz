@@ -21,6 +21,7 @@
               </div>
           </div>
       </div>
+    <a class="btn btn-success" target="#" href="https://www.patreon.com/join/phemus">Apply to Get Featured</a>
   </section>
 </div>
 </template>
@@ -63,6 +64,11 @@ h1 {
         margin-top: 4em;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .btn.btn-success {
+        font-size: 1.5em;
+        margin-top: 5%;
     }
 
     .c-header {

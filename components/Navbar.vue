@@ -12,7 +12,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="branding">
-          <a class="navbar-brand" href="/"><h2>Growtopian<img src="~/assets/verf.png"></h2></a>
+          <NuxtLink class="navbar-brand" to="/"><h2>Growtopian<img src="~/assets/verf.png"></h2></NuxtLink>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">

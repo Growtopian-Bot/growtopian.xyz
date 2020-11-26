@@ -49,7 +49,17 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    ['@nuxtjs/sitemap', {
+      hostname: 'https://growtopian.xyz',
+      path: '/sitemap.xml',
+      generate: true,
+      routes: [
+        '/',
+        '/commands',
+        '/donate'
+      ]
+    }]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
