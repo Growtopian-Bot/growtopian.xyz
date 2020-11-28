@@ -202,6 +202,11 @@ h3 {
   display: block;
   justify-content: space-between;
 
+  .bar-left {
+    border: 1px black solid;
+    box-shadow: 3px 3px 3px black;
+  }
+
   @media only screen and (min-width: 768px) {
     display: flex;
 
@@ -209,8 +214,6 @@ h3 {
       width: 25%;
       height: fit-content;
       position: fixed;
-      border: 1px black solid;
-      box-shadow: 3px 3px 3px black;
     }
 
     .bar-right {

@@ -19,7 +19,7 @@
                 <img v-bind:src="server.img" alt="svlogo" class="sv-img">
                   <a v-bind:href="server.invite" class="btn btn-warning" target="#">Join</a>
                   <div class="title">
-                      <img src="~/assets/partnered.png" v-if="server.partnered" class="partner"><h4>{{ server.name }}</h4>
+                      <img src="~/assets/partnered.webp" v-if="server.partnered" class="partner"><h4>{{ server.name }}</h4>
                       <small class="description">{{ server.description }}</small>
                   </div>
               </div>
@@ -160,7 +160,7 @@ h1 {
   text-align: center;
   background-size: cover;
   justify-content: center;
-  background-image: url('~assets/bck.jpg');
+  background-image: url('~assets/bck.webp');
   min-height: 79vh;
   height: fit-content;
 
