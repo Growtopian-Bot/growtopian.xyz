@@ -161,7 +161,8 @@ h1 {
   background-size: cover;
   justify-content: center;
   background-image: url('~assets/bck.jpg');
-  height: 79vh;
+  min-height: 79vh;
+  height: fit-content;
 
   img.logo {
       width: 8em;
