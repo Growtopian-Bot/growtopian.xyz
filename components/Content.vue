@@ -6,6 +6,10 @@
     <div class="info">
         <p>That's the Growtopia themed Discord bot you're looking for! <b>Growtopian</b> is one of the most used Discord Bot for Growtopia Discord servers. Games, trivias, search item names - infos, calculations, server moderation and a ton more!</p>
     </div>
+    <div class="buttons">
+        <a class="btn btn-info" type="button" data-toggle="modal" data-target="#myModal"><img src="https://discord.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg"> Add To Server</a>
+        <router-link class="btn btn-info" to="/commands">Commands</router-link>
+    </div>
   </div>
   <section id="servers" class="container">
       <h1>Featured Servers</h1>
@@ -45,6 +49,17 @@ export default {
 
 $font-1: "Roboto", sans-serif;
 $font-2: "PF BeauSans Pro", sans-serif;
+
+.buttons {
+    .btn {
+        margin: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        width: 12em;
+        height: 3em;
+        padding-top: 12px;
+    }
+}
 
 .content {
     margin-bottom: 10%;
