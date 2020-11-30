@@ -16,7 +16,7 @@
             {"name": "donate ", "desc": "You will receive random amount of gems"},
             {"name": "bfg", "desc": "Work at BFG and earn some gems"},
             {"name": "profile <optional: username>", "desc": "View your inventory"},
-            {"name": "title <title ID>", "desc": "Change your title from titles you own"},
+            {"name": "title <title ID>", "desc": "Change your title from titles you own, you can view your titles from /items"},
             {"name": "top", "desc": "View Leaderboard"},
             {"name": "store", "desc": "View Store"},
             {"name": "quiz", "desc": "Take a quiz and win some gems"},
@@ -41,6 +41,10 @@
             {"name": "gm <#channel name> <text>", "desc": "Broadcast using bot at selected channel"},
             {"name": "ban <user id/mention> <reason>", "desc": "Ban selected person"},
             {"name": "unban <user ID>", "desc": "Remove selected user's ban"}
+            ]},
+            {"name": "Patron", "commands": [
+                {"name": "title <name>", "desc": "Change your title to whatever you want"},
+                {"name": "customcolor <#HEXCODE> ", "desc": "Change your profile color"}
             ]}
     ]
 }

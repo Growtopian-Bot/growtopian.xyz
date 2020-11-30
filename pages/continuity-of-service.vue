@@ -5,7 +5,7 @@
         <div class="content">
             Hello,<br><br>
 
-It's Phemus. I've been developing the Growtopian for for around 2 years now. I've used different servers and ways to host the bot and continue my learning programming proccess with no cost as much as possible. However my current hosting is doing changes to Free Plan and will remove the free hosting support for my project, meaning that I will have to move to another free server and sadly, it doesn't exist. So far from the Patreon only one person subscribed to 10$ tier and it lasted only for a month - it will only keep the bot up for a month only. <br> <br>
+It's Phemus. I've been developing the Growtopian for around 2 years now. I've used different servers and ways to host the bot and continue my learning programming proccess with no cost as much as possible. However my current hosting is doing changes to Free Plan and will remove the free hosting support for my project, meaning that I will have to move to another free server and sadly, it doesn't exist. So far from the Patreon only one person subscribed to 10$ tier and it lasted only for a month - it will only keep the bot up for a month only. <br> <br>
 
 I'm a student and I don't have any income so I won't have enough money to host the bot forever, hence that I'm posting this for your supports to <b>@Growtopian</b> bot. I've created 2$ Tier at <a href="https://patreon.com/join/phemus"><b>Patreon</b></a> for it. Every single penny will be used for bot's hosting. If you cannot subscribe to any of the tiers, it's very appreciated if you can share it at your servers. I believe we can get over it together, thank you!
 
@@ -48,8 +48,7 @@ I'm a student and I don't have any income so I won't have enough money to host t
     .content {
         font-size: 20px;
         text-align: left;
-        max-width: 50%;
-        margin: 5% auto;
+        margin: 5% 2%;
     }
 }
 </style>

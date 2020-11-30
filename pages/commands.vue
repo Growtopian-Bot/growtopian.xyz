@@ -200,7 +200,7 @@ h3 {
 .bars {
   margin: 3em;
   display: block;
-  justify-content: space-between;
+  
 
   .bar-left {
     border: 1px black solid;
@@ -211,9 +211,9 @@ h3 {
     display: flex;
 
     .bar-left {
-      width: 25%;
       height: fit-content;
-      position: fixed;
+      position: absolute;
+      width: 25%;
     }
 
     .bar-right {
