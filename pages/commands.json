@@ -23,6 +23,7 @@
             {"name": "dragstats ", "desc": "View your dragon status"},
             {"name": "dragwar <@user/userid>", "desc": "Start dragonwar against someone with a dragon"},
             {"name": "bonus", "desc": "Claim your reward every 24 hours"},
+            {"name": "weekly", "desc": "Claim your weekly reward. This command is for donors only."},
             {"name": "quest ", "desc": "Get your daily quest and get 10,000 Gems"},
             {"name": "petbattle <player name>", "desc": "Pet battle against a member, should have at least 3000 gems"},
             {"name": "items ", "desc": "View items you own"},
@@ -44,7 +45,8 @@
             ]},
             {"name": "Patron", "commands": [
                 {"name": "title <name>", "desc": "Change your title to whatever you want"},
-                {"name": "customcolor <#HEXCODE> ", "desc": "Change your profile color"}
+                {"name": "customcolor <#HEXCODE> ", "desc": "Change your profile color"},
+                {"name": "weekly", "desc": "Claim your weekly reward"}
             ]}
     ]
 }

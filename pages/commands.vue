@@ -106,15 +106,15 @@ $bgColor-2: #2d6187;
 
 .panel.panel-default {
   background-color: $bgColor-2;
-  margin-bottom: 1em;
-  padding: 10px;
+  margin-bottom: .5em;
+  padding: 6px;
   border-radius: 5px;
   cursor: pointer;
   color: white;
-  border: 1px black solid;
+  border: 1px #0741ff solid;
 
   &[aria-expanded="true"] {
-    border: 1px #0741ff solid;
+    border: 1px #07daff solid;
   }
 
   .panel-body {
@@ -127,7 +127,9 @@ $bgColor-2: #2d6187;
   }
 
   h5 {
-    color: #fadcaa;
+    margin-bottom: 2px;
+    font-weight: 600;
+    color: #dad9ad;
   }
 
   .usage {
@@ -209,16 +211,16 @@ h3 {
 
   @media only screen and (min-width: 768px) {
     display: flex;
+    margin: 3em 10em;
 
     .bar-left {
       height: fit-content;
-      position: absolute;
       width: 25%;
     }
 
     .bar-right {
-      margin-left: 30%;
-      width: 70%;
+      margin-left: 5%;
+      width: 60%;
     }
   }
 }
