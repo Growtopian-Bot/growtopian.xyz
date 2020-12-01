@@ -1,11 +1,3 @@
-<template>
-    
-</template>
-
 <script>
-export default {
-    beforeMount() {
-        window.location.href = 'https://patreon.com/join/phemus';
-    }
-}
+window.location.href = 'https://patreon.com/join/phemus';
 </script>

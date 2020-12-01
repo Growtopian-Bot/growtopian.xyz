@@ -39,8 +39,9 @@
             data-toggle="collapse"
             class="panel panel-default collapsed"
             v-bind:href="'#collapse' + key"
+            v-if="command.name"
           >
-            <h5>{{ command.name }}</h5>
+            <h5>{{ command.name }}<img src="~assets/star.svg" title="Donor Command" v-if="command.donor"></h5>
             {{ command.desc }}
             <div v-bind:id="'collapse' + key" class="panel-collapse collapse">
               <div class="panel-body">
@@ -50,6 +51,9 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="patreon" v-if="command.patreon">
+            <a href="https://patreon.com/join/phemus" class="btn btn-block btn-danger" target="_">Click to become Patron Now! 🚀</a>
           </div>
         </div>
       </div>
@@ -104,6 +108,12 @@ $bgColor-2: #2d6187;
   }
 }
 
+a.btn {
+  font-weight: bold;
+  transition: 0.4s;
+  font-size: 1.5em;
+}
+
 .panel.panel-default {
   background-color: $bgColor-2;
   margin-bottom: .5em;
@@ -130,6 +140,11 @@ $bgColor-2: #2d6187;
     margin-bottom: 2px;
     font-weight: 600;
     color: #dad9ad;
+
+    img {
+      margin-left: .5em;
+      margin-top: -5px;
+    }
   }
 
   .usage {
