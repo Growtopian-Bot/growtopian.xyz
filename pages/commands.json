@@ -15,6 +15,7 @@
         {"name": "Game", "commands": [
             {"name": "donate ", "desc": "You will receive random amount of gems"},
             {"name": "bfg", "desc": "Work at BFG and earn some gems"},
+            {"name": "provider <number>", "desc": "Harvest your providers, do /items to view providers you own."},
             {"name": "profile <optional: username>", "desc": "View your inventory"},
             {"name": "title <title ID>", "desc": "Change your title from titles you own, you can view your titles from /items"},
             {"name": "top", "desc": "View Leaderboard"},
