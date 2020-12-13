@@ -93,7 +93,7 @@ export default {
       routes: [
         '/',
         '/commands',
-        '/donate',
+        '/premium',
         '/continuity-of-service'
       ]
     }]
