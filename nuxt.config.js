@@ -58,6 +58,13 @@ export default {
         crossorigin: "anonymous",
         defer: true
       },
+      {
+        src:
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+        'data-ad-client':
+        "ca-pub-8568718403889933",
+        async: true
+      }
     ]
   },
 
