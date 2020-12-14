@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <head>
-      <title>Growtopian - Discord Bot</title>
-    </head>
     <Navbar />
     <Nuxt />
     <Footer />
