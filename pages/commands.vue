@@ -226,16 +226,21 @@ h3 {
 
   @media only screen and (min-width: 768px) {
     display: flex;
-    margin: 3em 10em;
+    margin: 3em 5em;
+
+    .buttons {
+      display: flex;
+    }
 
     .bar-left {
       height: fit-content;
-      width: 25%;
+      width: 35%;
     }
 
     .bar-right {
       margin-left: 5%;
       width: 60%;
+      margin-right: 5em;
     }
   }
 }

@@ -1,53 +1,40 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarTogglerDemo03"
-      aria-controls="navbarTogglerDemo03"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="branding">
-          <NuxtLink class="navbar-brand" to="/"><h2>Growtopian<img src="~/assets/verf.webp"></h2></NuxtLink>
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-xl-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <NuxtLink class="nav-link" to="/">Growtopian Bot</NuxtLink>
+            </li>
+            <li class="nav-item">
+                <a href="/#servers" class="nav-link">Public Servers</a>
+            </li>
+            <li class="nav-item">
+                <NuxtLink class="nav-link" to="/commands">Commands</NuxtLink>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://discord.gg/mPKz9gV" target="#">Support Server</a>
+            </li>
+        </ul>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="order-0 mx-auto">
+        
+            <NuxtLink class="navbar-brand mx-auto" to="/"><h2>Growtopian<img src="~/assets/verf.webp"></h2></NuxtLink>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="btn btn-danger" href="https://patreon.com/phemus" target="#">Patreon</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn invite" type="button" data-toggle="modal" data-target="#myModal">Add To Server</a>
+            </li>
+        </ul>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <NuxtLink class="nav-link" to="/">Growtopian Bot</NuxtLink>
-        </li>
-        <li class="nav-item">
-          <a href="/#servers" class="nav-link">Public Servers</a>
-        </li>
-        <li class="nav-item">
-          <NuxtLink class="nav-link" to="/commands">Commands</NuxtLink>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://discord.gg/mPKz9gV" target="#">Support Server</a>
-        </li>
-      </ul>
-      <div class="redir">
-        <li class="nav-item">
-          <a
-            class="btn btn-danger"
-            href="https://patreon.com/phemus"
-            target="#"
-            >Patreon</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="btn invite" type="button" data-toggle="modal" data-target="#myModal"
-            >Add To Server</a
-          >
-        </li>
-      </div>
-    </div>
-
-<!-- Modal -->
+    <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -73,13 +60,41 @@
 
   </div>
 </div>
-  </nav>
+</nav>
 </template>
 
 <style lang="scss" scoped>
-body {
-  background-color: rgb(24, 39, 88);
+.navbar {
+    background: rgb(103,168,240) !important;
+    background-color: linear-gradient(90deg, rgba(103,168,240,1) 0%, rgba(102,167,240,1) 35%, rgba(111,171,238,1) 100%) !important;
+    font-weight: bold;
+
+    .navbar-nav.mr-auto .nav-item a {
+        color: #ffffff;
+
+        &:hover {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+    }
 }
+
+.navbar-brand {
+    vertical-align: middle;
+    text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    margin-top: -5px;
+    margin-left: 8px;
+    width: 1em;
+  }
+
+a.btn {
+    margin-left: 8px;
+    font-weight: bold;
+}
+
 
 .btn.invite {
   background-color: rgb(36, 83, 119);
@@ -91,60 +106,12 @@ body {
   }
 }
 
-.redir {
-
-    display: flex;
-
-    a {
-        margin-left: 8px;
-        font-weight: bold;
+@media only screen and (max-width: 1024px) {
+    .order-3 {
+        .navbar-nav {
+            flex-direction: row;
+        }
     }
-
-  list-style: none;
 }
 
-h2 {
-  font-weight: bold;
-  text-shadow: 3px 1px rgba($color: #000000, $alpha: 0.5);
-}
-
-.navbar {
-  font-weight: bold;
-  background: rgb(103,168,240) !important;
-  background-color: linear-gradient(90deg, rgba(103,168,240,1) 0%, rgba(102,167,240,1) 35%, rgba(111,171,238,1) 100%) !important;
-}
-
-.branding {
-  text-align: center;
-  position: absolute;
-  height: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.navbar-brand {
-  margin-left: 2.5em;
-
-  img {
-    margin-top: -5px;
-    margin-left: 8px;
-    width: 1em;
-  }
-
-}
-
-.nav-item a {
-  color: white !important;
-}
-
-
-.nav-link:hover {
-  text-decoration: underline;
-  transition: 0.4s;
-
-  &.btn {
-    color: white !important;
-  }
-}
 </style>

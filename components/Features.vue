@@ -39,6 +39,10 @@ $font-1: 'PF BeauSans Pro', sans-serif;
     margin-bottom: 0;
     background-color: transparent;
 
+    .textbox {
+        margin: 1.5em;
+    }
+
     &.feature1 {
         background-color: #99dfffa2;
     }

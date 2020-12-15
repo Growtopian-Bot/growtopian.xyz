@@ -45,7 +45,14 @@ export default {
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.cdnfonts.com/css/pf-beausans-pro");
+
+@font-face {
+    font-family: 'PF BeauSans Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PF BeauSans Pro'), url('https://fonts.cdnfonts.com/s/12902/UFONTS.COM_PFBEAUSANSPRO-BOLD.woff') format('woff');
+}
+
 
 $font-1: "Roboto", sans-serif;
 $font-2: "PF BeauSans Pro", sans-serif;
@@ -67,10 +74,6 @@ $font-2: "PF BeauSans Pro", sans-serif;
         &.invite {
             background-color: white;
             color: rgb(65, 168, 253);
-
-            &:hover {
-                background-color: rgb(241, 241, 241);
-            }
         }
 
         span {
@@ -194,6 +197,13 @@ h1 {
 
   
   @media only screen and (max-width: 600px) {
+
+      .buttons {
+        a.btn {
+        margin: 24px 0;
+        }
+      }
+
       img.logo {
           margin-top: 1em;
       }
