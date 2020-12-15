@@ -47,7 +47,7 @@
               <div class="panel-body">
                 <div class="usage">
                   <h6>USAGE</h6>
-                  /<b>{{ command.name }}</b>
+                  <b>/{{ command.name }}</b>
                 </div>
               </div>
             </div>
