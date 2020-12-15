@@ -1,7 +1,7 @@
 <template>
 <div class="content">
 <div class="jumbotron">
-    <img class="logo" src="~/assets/growtopian.png" alt="logo">
+    <img class="logo" src="~/assets/growtopian.webp" alt="logo">
     <h2>Growtopia Themed Discord Bot</h2>
     <div class="info">
         <p>That's the Growtopia themed Discord bot you're looking for! <b>Growtopian</b> is one of the most used Discord Bot for Growtopia Discord servers. Games, trivias, search item names - infos, calculations, server moderation and a ton more!</p>
@@ -74,6 +74,10 @@ $font-2: "PF BeauSans Pro", sans-serif;
         &.invite {
             background-color: white;
             color: rgb(65, 168, 253);
+
+            &:hover {
+                background-color: rgb(241, 241, 241);
+            }
         }
 
         span {
