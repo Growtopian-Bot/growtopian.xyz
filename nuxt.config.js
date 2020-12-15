@@ -24,7 +24,7 @@ export default {
       { property: 'og:title', content: 'Growtopian - Discord Bot'},
       { property: 'og:description', content: 'Growtopian is a Growtopia game themed feature-rich Discord bot.' },
       { property: 'og:url', content: 'https://growtopian.xyz'},
-      { property: 'og:image', content: '/growtopian.webp'},
+      { property: 'og:image', content: '/growtopian.png'},
       { property: 'og:image:width', content: '64'},
       { property: 'og:image:height', content: '64'},
       { hid: 'description', name: 'description', content: 'Growtopian is a Growtopia game themed feature-rich Discord bot.' },
