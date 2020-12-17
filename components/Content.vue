@@ -92,9 +92,6 @@ $font-2: "PF BeauSans Pro", sans-serif;
     }
 }
 
-.content {
-    margin-bottom: 10%;
-}
 
 h1 {
     font-weight: bold;

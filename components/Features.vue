@@ -38,6 +38,7 @@ $font-1: 'PF BeauSans Pro', sans-serif;
     justify-content: space-evenly;
     margin-bottom: 0;
     background-color: transparent;
+    padding: 0;
 
     .textbox {
         margin: 1.5em;
@@ -78,7 +79,12 @@ $font-1: 'PF BeauSans Pro', sans-serif;
         display: block;
         
     }
+}
 
+@media only screen and (max-width: 880px) {
+    .jumbotron {
+        padding: 32px;
+    }
 }
 
 </style>

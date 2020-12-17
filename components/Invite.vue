@@ -1,44 +1,59 @@
 <template>
-            <div class="container">
-            <h1>Meet with the Growtopian.</h1>
-            <div class="buttons">
-                 <a class="btn btn-info" type="button" data-toggle="modal" data-target="#myModal"><img src="https://discord.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg"> Add To Server</a>
-                 <router-link class="btn btn-info" to="/commands">Commands</router-link>
-            </div>
-        </div>
+        <div class="buttons">
+        <a class="btn invite btn-info" type="button" data-toggle="modal" data-target="#myModal"><span><img src="~/assets/discord-logo.svg"> Add To Server</span></a>
+        <router-link class="btn btn-info" to="/commands"><span>Commands</span></router-link>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
-    text-align: center !important;
-    justify-content: center;
-    margin-top: 5em;
+.buttons {
+    text-align: center;
+    margin: 5em 0 5em 0;
+    a.btn {
+        margin: 24px;
+        width: 20em;
+        height: 3.5em;
+        border-radius: 28px;
+        background-color: rgb(46, 161, 255);
 
-    .buttons {
-        justify-content: center;
-        display: inline-flex;
-        width: fit-content;
 
-        @media only screen and (max-width: 600px) {
-            display: block;
+        &:hover {
+            background-color: rgb(25, 115, 189);
+            box-shadow: 0px 2px 5px rgba(77, 77, 77, 0.7);
         }
 
-        img {
-            width: 1.5em;
-        }
-
-        .btn {
-            background-color: #4343b9;
-            margin: 2em;
-            
-            font-size: 1.5em;
-            border: none;
+        &.invite {
+            background-color: white;
+            color: rgb(65, 168, 253);
 
             &:hover {
-                background-color: rgb(57, 57, 247);
-                transition: 0.4s;
+                background-color: rgb(241, 241, 241);
+            }
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+
+            img {
+                width: 35px;
             }
         }
     }
+}
+
+  @media only screen and (max-width: 600px) {
+
+      .buttons {
+        a.btn {
+            margin: 24px 0;
+        }
+      }
+
+      img.logo {
+          margin-top: 1em;
+      }
+
 }
 </style>

@@ -51,6 +51,16 @@ I'm a student and I don't have any income so I won't have enough money to host t
         margin: 5% 2%;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .wrap {
+        margin: 1em;
+    }
+
+    .content {
+        font-size: 15px !important;
+    }
+}
 </style>
 
 <script>
