@@ -31,8 +31,7 @@ export default {
       { hid: 'keywords', name: 'keywords', content: 'Growtopian, Discord, Discord Bot, Growtopia, World Lock, Fun, Growtopian Bot' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", href: "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity: "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin: "anonymous"}
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
       {
@@ -55,6 +54,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    "@/assets/css/bootstrap.min.css"
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -86,5 +86,8 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    filenames: {
+      img: 'img/[name]-[contenthash:7].[ext]'
+    }
   }
 }
