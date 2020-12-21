@@ -6,8 +6,9 @@
       customizable with the <span>/prefix</span> command.
     </div>
     <div class="bars">
-      <div class="jumbotron bar-left">
-        <h3>Categories</h3>
+      <div class="left">
+        <div class="jumbotron bar-left">
+          <h3>Categories</h3>
         <div
           class="categories"
           v-for="(category, key) in Commands.categories"
@@ -31,6 +32,10 @@
             value="Hide All"
             @click="hideAll"
           />
+        </div>
+        </div>
+        <div class="discord">
+          <iframe src="https://discord.com/widget?id=601852284212740166&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
       </div>
       <div class="jumbotron bar-right">
@@ -101,6 +106,10 @@ export default {
 <style lang="scss" scoped>
 $bgColor-1: #9aceff;
 $bgColor-2: #2d6187;
+
+iframe {
+  display: block;
+}
 
 .buttons {
   .btn {
@@ -226,7 +235,7 @@ h3 {
 
   @media only screen and (min-width: 768px) {
     display: flex;
-    margin: 3em 5em;
+    margin: 3em 6em;
 
     .buttons {
       display: flex;
@@ -234,7 +243,6 @@ h3 {
 
     .bar-left {
       height: fit-content;
-      width: 35%;
     }
 
     .bar-right {
@@ -243,5 +251,15 @@ h3 {
       margin-right: 5em;
     }
   }
+}
+
+@media only screen and (max-width: 768px) {
+    .discord {
+      display: none;
+    }
+
+    .bars {
+      margin: 3em 2em;
+    }
 }
 </style>

@@ -4,8 +4,10 @@
             <div class="text">
                 <h4>GROWTOPIAN.XYZ</h4>
              © Copyright Growtopian 2018-2020. All sprites and related graphics are owned by Growtopia and Ubisoft Entertainment® - Growtopian is in no way affiliated with Ubisoft Entertainment, Growtopia or Discord Inc.
-             <a class="btn btn-light" type="button" data-toggle="modal" data-target="#myModal">Invite Bot</a>
-             <a class="btn btn-light" href="https://discord.gg/mPKz9gV">Join Support Server</a>
+             <div class="buttons">
+                 <a class="btn btn-light" type="button" data-toggle="modal" data-target="#myModal">Invite Bot</a>
+                <a class="btn btn-light" href="https://discord.gg/mPKz9gV">Join Support Server</a>
+             </div>
             </div>
             <div class="links">
                 <h5>Navigation</h5>
