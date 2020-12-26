@@ -74,7 +74,6 @@ export default {
     ['@nuxtjs/sitemap', {
       hostname: 'https://growtopian.xyz',
       path: '/sitemap.xml',
-      generate: true,
       routes: [
         '/',
         '/commands',
