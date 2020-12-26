@@ -35,7 +35,7 @@
         </div>
         </div>
         <div class="discord">
-          <iframe src="https://discord.com/widget?id=601852284212740166&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <iframe src="https://discord.com/widget?id=601852284212740166&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
       </div>
       <div class="jumbotron bar-right">

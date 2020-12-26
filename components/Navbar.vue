@@ -65,8 +65,7 @@
 
 <style lang="scss" scoped>
 .navbar {
-    background: rgb(103,168,240) !important;
-    background-color: linear-gradient(90deg, rgba(103,168,240,1) 0%, rgba(102,167,240,1) 35%, rgba(111,171,238,1) 100%) !important;
+    background-color: rgb(103,168,240) !important;
     font-weight: bold;
 
     .navbar-nav.mr-auto .nav-item a {
