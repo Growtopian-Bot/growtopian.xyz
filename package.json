@@ -1,6 +1,17 @@
 {
-  "name": "growtopian-uni",
+  "name": "growtopian.xyz",
+  "description": "Growtopian's website",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AykutSarac/growtopian.xyz.git"
+  },
+  "author": "AykutSarac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AykutSarac/growtopian.xyz/issues"
+  },
+  "homepage": "https://github.com/AykutSarac/growtopian.xyz#readme",
   "private": true,
   "scripts": {
     "dev": "nuxt",
