@@ -16,12 +16,12 @@
             </li>
         </ul>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+    <button class="navbar-toggler" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
     <div class="order-0 mx-auto">
         
-            <NuxtLink class="navbar-brand mx-auto" to="/"><h2>Growtopian<img src="~/assets/verf.webp"></h2></NuxtLink>
+            <NuxtLink class="navbar-brand mx-auto" to="/"><h2>Growtopian<img src="~/assets/verf.webp" alt="verified-icon"></h2></NuxtLink>
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
@@ -29,7 +29,7 @@
                 <a class="btn btn-danger" href="https://patreon.com/phemus" target="#">Patreon</a>
             </li>
             <li class="nav-item">
-                <a class="btn invite" type="button" data-toggle="modal" data-target="#myModal">Add To Server</a>
+                <a class="btn invite" data-toggle="modal" data-target="#myModal">Add To Server</a>
             </li>
         </ul>
     </div>

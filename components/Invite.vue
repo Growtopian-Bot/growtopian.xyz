@@ -1,6 +1,6 @@
 <template>
         <div class="buttons">
-        <a class="btn invite btn-info" type="button" data-toggle="modal" data-target="#myModal"><span><img src="~/assets/discord-logo.svg"> Add To Server</span></a>
+        <a class="btn invite btn-info" data-toggle="modal" data-target="#myModal"><span><img src="~/assets/discord-logo.svg" alt="discord-logo"> Add To Server</span></a>
         <router-link class="btn btn-info" to="/commands"><span>Commands</span></router-link>
     </div>
 </template>

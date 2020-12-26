@@ -46,7 +46,7 @@
             v-bind:href="'#collapse' + key"
             v-if="command.name"
           >
-            <h5>{{ command.name }}<img src="~assets/star.svg" title="Donor Command" v-if="command.donor"></h5>
+            <h5>{{ command.name }}<img src="~assets/star.svg" alt="star-icon" title="Donor Command" v-if="command.donor"></h5>
             {{ command.desc }}
             <div v-bind:id="'collapse' + key" class="panel-collapse collapse">
               <div class="panel-body">
