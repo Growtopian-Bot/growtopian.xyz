@@ -37,6 +37,7 @@
                 src="~/assets/partnered.webp"
                 v-if="server.partnered"
                 class="partner"
+                alt="partner-icon"
               />
               <h4>{{ server.name }}</h4>
               <small class="description">{{ server.description }}</small>
