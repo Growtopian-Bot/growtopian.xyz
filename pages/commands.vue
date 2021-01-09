@@ -35,7 +35,7 @@
         </div>
         </div>
         <div class="discord">
-          <iframe src="https://discord.com/widget?id=601852284212740166&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <!-- <iframe src="https://discord.com/widget?id=601852284212740166&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
         </div>
       </div>
       <div class="jumbotron bar-right">
@@ -52,7 +52,8 @@
               <div class="panel-body">
                 <div class="usage">
                   <h6>USAGE</h6>
-                  <b>/{{ command.name }}</b>
+                  <span v-if="!command.usage">/{{ command.name }}</span>
+                  <p style="white-space: pre-line; line-height: 1.6;" v-if="command.usage">{{ command['usage'] }}</p>
                 </div>
               </div>
             </div>
@@ -229,6 +230,7 @@ h3 {
   
 
   .bar-left {
+    width: 300px;
     border: 1px black solid;
     box-shadow: 3px 3px 3px black;
   }
