@@ -1,7 +1,7 @@
 {
     "categories": [
         {"name": "General", "commands": [
-            {"name": "market", "desc": "Search for the items from the marketplace, add items for sale and search from the list...", "usage": "/market <item name>\nSearch specific item\n\n/market <page>\nChange pages\n\n/market sell <item name> - 10 each - VENDABC\nExample of how to add new items to market, always put dashes\n\n/market remove\nRemoves the oldest item"},
+            {"name": "market", "desc": "Search for the items from the marketplace, add items for sale and search from the list...", "usage": "/market <item name>\nSearch specific item\n\n/market <page>\nChange pages\n\n/market sell <item name> - 10 each - VENDABC\nExample of how to add new items to market, always put dashes\n\n/market remove <item name>\nRemove an item from your list"},
             {"name": "stats", "desc": "Check Growtopia Server Status, Time & WOTD."},
             {"name": "notify", "desc": "Get notification immediately when Growtopia server goes up or down. This command is for donors only.", "donor": true},
             {"name": "info <item name>", "desc": "Search item recipes or infos."},
