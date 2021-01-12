@@ -52,7 +52,7 @@
               <div class="panel-body">
                 <div class="usage">
                   <h6>USAGE</h6>
-                  <span v-if="!command.usage">/{{ command.name }}</span>
+                  <div v-if="!command.usage">/{{ command.name }}</div>
                   <p style="white-space: pre-line; line-height: 1.6;" v-if="command.usage">{{ command['usage'] }}</p>
                 </div>
               </div>

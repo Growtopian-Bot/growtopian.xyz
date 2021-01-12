@@ -45,12 +45,6 @@
           </div>
         </div>
       </div>
-      <a
-        class="btn btn-success"
-        target="#"
-        href="https://www.patreon.com/join/phemus"
-        >Apply to Get Featured</a
-      >
     </section>
   </div>
 </template>
