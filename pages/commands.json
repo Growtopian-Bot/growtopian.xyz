@@ -3,6 +3,7 @@
         {"name": "General", "commands": [
             {"name": "market", "desc": "Search for the items from the marketplace, add items for sale and search from the list...", "usage": "/market <item name>\nSearch specific item\n\n/market <page>\nChange pages\n\n/market sell {item name} - {price} each - {WORLD NAME}\n/market sell {item name} - {price} per - {WORLD NAME}\nExample of how to add new items to market, always put dashes(-)\n\n/market remove <item name>\nRemove an item from your list\n\n/market mylist\nView your items at market"},
             {"name": "stats", "desc": "Check Growtopia Server Status, Time & WOTD."},
+            {"name": "events", "desc": "View timeleft for next Growtopia monthly events"},
             {"name": "notify", "desc": "Get notification immediately when Growtopia server goes up or down. This command is for donors only.", "donor": true},
             {"name": "info <item name>", "desc": "Search item recipes or infos."},
             {"name": "search <keyword>", "desc": "Get list of items matching with keyword."},
