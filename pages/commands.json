@@ -10,7 +10,6 @@
             {"name": "render <world name>", "desc": "Showing specified world render with last render date."},
             {"name": "wotd ", "desc": "View World Of The Day render."},
             {"name": "image <item name>", "desc": "View Item sprite in 128x128 size."},
-            {"name": "ign <mention user OR your GrowID>", "desc": "Find/Set GrowID."},
             {"name": "feedback <your message>", "desc": "Leave feedback/suggestion about Growtopian bot."},
             {"name": "about ", "desc": "View information about bot."}
         ]},
