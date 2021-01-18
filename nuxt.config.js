@@ -77,8 +77,7 @@ export default {
       routes: [
         '/',
         '/commands',
-        '/premium',
-        '/continuity-of-service'
+        '/premium'
       ]
     }]
   ],

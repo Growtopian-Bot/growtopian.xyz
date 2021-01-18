@@ -3,7 +3,7 @@
         <div class="flex">
             <div class="text">
                 <h4>GROWTOPIAN.XYZ</h4>
-             © Copyright Growtopian 2018-2020. All sprites and related graphics are owned by Growtopia and Ubisoft Entertainment® - Growtopian is in no way affiliated with Ubisoft Entertainment, Growtopia or Discord Inc.
+             © Copyright Growtopian 2018-{{ new Date().getFullYear()}} . All sprites and related graphics are owned by Growtopia and Ubisoft Entertainment® - Growtopian is in no way affiliated with Ubisoft Entertainment, Growtopia or Discord Inc.
              <div class="buttons">
                  <a class="btn btn-light" data-toggle="modal" data-target="#myModal">Invite Bot</a>
                 <a class="btn btn-light" href="https://discord.gg/mPKz9gV">Join Support Server</a>
@@ -14,7 +14,6 @@
                 <ul>
                     <li><RouterLink to="/">Home</RouterLink></li>
                     <li><RouterLink to="/rules">Rules</RouterLink></li>
-                    <li><RouterLink to="/continuity-of-service">Continuity of Service</RouterLink></li>
                     <li><RouterLink to="/commands">Commands</RouterLink></li>
                     <li><RouterLink to="/premium"><span>Premium</span></RouterLink></li>
                 </ul>
