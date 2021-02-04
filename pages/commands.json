@@ -12,6 +12,9 @@
             {"name": "feedback <your message>", "desc": "Leave feedback/suggestion about Growtopian bot."},
             {"name": "about ", "desc": "View information about bot."}
         ]},
+        {"name": "Fun", "commands": [
+            {"name": "gtmeme ", "desc": "Random Growtopia related memes"}
+        ]},
         {"name": "Game", "commands": [
             {"name": "donate ", "desc": "You will receive random amount of gems"},
             {"name": "bfg", "desc": "Work at BFG and earn some gems"},
