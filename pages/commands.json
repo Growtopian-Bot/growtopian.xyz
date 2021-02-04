@@ -1,10 +1,9 @@
 {
     "categories": [
         {"name": "General", "commands": [
-            {"name": "market", "desc": "Search for the items from the marketplace, add items for sale and search from the list...", "usage": "/market <item name>\nSearch specific item\n\n/market <page>\nChange pages\n\n/market sell {item name} - {price} each - {WORLD NAME}\n/market sell {item name} - {price} per - {WORLD NAME}\nExample of how to add new items to market, always put dashes(-)\n\n/market remove <item name>\nRemove an item from your list\n\n/market mylist\nView your items at market"},
+            {"name": "market", "desc": "Search for the items from the marketplace, add items for sale and search from the list...", "usage": "/market <item name>\nSearch specific item\n\n/market <page>\nChange pages\n\n/market sell {item name} * {price} each * {WORLD NAME}\n/market sell {item name} * {price} per * {WORLD NAME}\nExample of how to add new items to market, always put asteriks(*)\n\n/market remove <item name>\nRemove an item from your list\n\n/market mylist\nView your items at market"},
             {"name": "stats", "desc": "Check Growtopia Server Status, Time & WOTD."},
             {"name": "events", "desc": "View timeleft for next Growtopia monthly events"},
-            {"name": "notify", "desc": "Get notification immediately when Growtopia server goes up or down. This command is for donors only.", "donor": true},
             {"name": "info <item name>", "desc": "Search item recipes or infos."},
             {"name": "search <keyword>", "desc": "Get list of items matching with keyword."},
             {"name": "render <world name>", "desc": "Showing specified world render with last render date."},
@@ -16,7 +15,8 @@
         {"name": "Game", "commands": [
             {"name": "donate ", "desc": "You will receive random amount of gems"},
             {"name": "bfg", "desc": "Work at BFG and earn some gems"},
-            {"name": "use <number>", "desc": "Harvest your providers and consume items, do /items to view providers and items you own."},
+            {"name": "use <item>", "desc": "Harvest your providers and consume items, do /items to view providers and items you own."},
+            {"name": "providers", "desc": "View all the providers you own"},
             {"name": "profile <optional: username>", "desc": "View your inventory"},
             {"name": "gift <amount> <item name> <@user>", "desc": "Gift an user one of your items, currently available items are wl, dl & gems."},
             {"name": "title <title ID>", "desc": "Change your title from titles you own, you can view your titles from /titles"},
@@ -50,7 +50,6 @@
                 {"name": "title <name>", "desc": "Change your title to whatever you want", "donor": true},
                 {"name": "customcolor <#HEXCODE> ", "desc": "Change your profile color", "donor": true},
                 {"name": "weekly", "desc": "Claim your weekly reward", "donor": true},
-                {"name": "notify", "desc": "Get notification immediately when Growtopia server goes up or down. This command is for donors only.", "donor": true},
                 {"patreon": true}
             ]}
     ]
