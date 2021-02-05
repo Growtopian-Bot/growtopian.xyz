@@ -5,10 +5,8 @@
       <h2>Growtopia Themed Discord Bot</h2>
       <div class="info">
         <p>
-          That's the Growtopia themed Discord bot you're looking for!
-          <b>Growtopian</b> is one of the most used Discord Bot for Growtopia
-          Discord servers. Games, trivias, search item names - infos,
-          calculations, server moderation and a ton more!
+          
+A bot with a variety of tools you need on the Growtopia game. It is also an economy-bot with various games and activities to keep your server active.
         </p>
       </div>
       <div class="buttons">
@@ -242,7 +240,7 @@ h1 {
     font-size: 20px;
     max-width: 800px;
     margin: 2em auto;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.836);
     border-radius: 10px;
   }
 
