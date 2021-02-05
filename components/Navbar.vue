@@ -54,7 +54,7 @@
         <a class="btn btn-info" href="https://discord.com/invite/mPKz9gV">» Join Server « </a>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-success" href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8">Invite The Bot</a>
+        <a class="btn btn-success" href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV">Invite The Bot</a>
         <button type="button" class="btn" data-dismiss="modal">Close</button>
       </div>
     </div>
