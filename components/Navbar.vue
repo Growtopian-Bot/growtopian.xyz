@@ -26,7 +26,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="btn btn-danger" href="https://patreon.com/phemus" target="#">Patreon</a>
+                <a class="btn btn-danger" href="https://patreon.com/growtopian" target="#">Patreon</a>
             </li>
             <li class="nav-item">
                 <a class="btn invite" data-toggle="modal" data-target="#myModal">Add To Server</a>

@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="patreon" v-if="command.patreon">
-            <a href="https://patreon.com/join/phemus" class="btn btn-block btn-danger" target="_">Click to become Patron Now! 🚀</a>
+            <a href="https://patreon.com/join/growtopian" class="btn btn-block btn-danger" target="_">Click to become Patron Now! 🚀</a>
           </div>
         </div>
       </div>

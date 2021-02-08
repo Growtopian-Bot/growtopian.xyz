@@ -4,7 +4,7 @@
 <script>
 export default {
     middleware({ redirect }) {
-        redirect('https://patreon.com/join/phemus');
+        redirect('https://patreon.com/join/growtopian');
     }
 }
 </script>
