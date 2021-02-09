@@ -39,7 +39,8 @@
         </div>
       </div>
       <div class="jumbotron bar-right">
-        <div class="panel-group" v-for="(command, key) in List" :key="key">
+        <input id="search" type="text" data-toggle="collapse" class="panel panel-default collapsed" placeholder="Search a command..." v-model="search">
+        <div class="panel-group" v-for="(command, key) in List.filter(c => c.name.match(search) || (c.aliases ? c.aliases.some(r => r.match(search)) : ''))" :key="key">
           <div
             data-toggle="collapse"
             class="panel panel-default collapsed"
@@ -73,6 +74,7 @@ import Commands from "./commands.json";
 export default {
   data() {
     return {
+      search: "",
       Commands,
       List: Commands.categories[0].commands,
     };
@@ -185,6 +187,17 @@ h3 {
   &.bar-right {
     background-color: transparent;
     padding: 0;
+
+    #search {
+        background-color: #0a1366e5;
+        width: 100%;
+        font-size: 25px;
+        cursor: text;
+      }
+
+      ::placeholder, -ms-input-placeholder, -ms-input-placeholder {
+        color: rgba(228, 218, 200, 0.801);
+      }
   }
 
   span {
