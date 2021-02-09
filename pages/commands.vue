@@ -159,6 +159,10 @@ a.btn {
 
   .usage {
     line-height: 1em;
+
+    p {
+      margin-bottom: 0;
+    }
   }
   
 
