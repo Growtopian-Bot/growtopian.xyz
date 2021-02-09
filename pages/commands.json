@@ -10,6 +10,7 @@
                 },
                 {
                     "name": "stats",
+                    "aliases": ["time"],
                     "desc": "Check Growtopia Server Status, Time & WOTD."
                 },
                 {
@@ -238,6 +239,8 @@
                     "donor": true
                 },
                 {
+                    "name": "",
+                    "desc": "",
                     "patreon": true
                 }
             ]
