@@ -9,6 +9,15 @@
                     "usage": "/market <item name>\nSearch specific item\n\n/market <page>\nChange pages\n\n/market sell {item name} * {price} each * {WORLD NAME}\n/market sell {item name} * {price} per * {WORLD NAME}\nExample of how to add new items to market, always put asteriks(*)\n\n/market remove <item name>\nRemove an item from your list\n\n/market mylist\nView your items at market"
                 },
                 {
+                    "name": "set",
+                    "desc": "Set planner, create your set in a few seconds...",
+                    "usage": "/set <item> | <item> | ..."
+                },
+                {
+                    "name": "randomset",
+                    "desc": "Create random set"
+                },
+                {
                     "name": "stats",
                     "aliases": ["time"],
                     "desc": "Check Growtopia Server Status, Time & WOTD."
