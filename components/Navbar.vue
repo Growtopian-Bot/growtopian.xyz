@@ -50,8 +50,7 @@
           <li>Follow Discord's Terms of Service</li>
           <li> Do not violate The Growtopian Code - If we find out your server is part of illegal activities we'll remove the bot manually.</li>
         </ul>
-        <p>Now, we're good to go captain! <br> Don't hesitate to come to our server if you have any questions!</p>
-        <a class="btn btn-info" href="https://discord.com/invite/mPKz9gV">» Join Server « </a>
+        <p>Now, we're good to go captain! <br> Do not hesitate to come to our server if you have any questions!</p>
       </div>
       <div class="modal-footer">
         <a class="btn btn-success" href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV">Invite The Bot</a>
