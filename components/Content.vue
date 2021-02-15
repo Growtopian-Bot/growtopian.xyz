@@ -5,7 +5,7 @@
       <h2>Growtopia Themed Discord Bot</h2>
       <div class="info">
         <p>
-          Growtopian is an economy-bot that will make your time fun while grinding for gems. Oh yeah, it also has great tools for players of game Growtopia!
+          Growtopian is an economy-bot that will make your time fun while grinding for gems. Oh yeah, it also has lots of great tools for players of game Growtopia!
         </p>
       </div>
       <div class="buttons">
