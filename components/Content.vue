@@ -196,8 +196,9 @@ h1 {
 }
 
 .jumbotron {
-  background-color: rgb(103, 168, 240);
-  background-image: url("~assets/bck.webp");
+  background-color: #00a8ea;
+  background-image: url("~assets/bg.webp");
+  background-position-y: 5%;
   border-radius: 0;
   font-family: $font-1;
   text-align: center;
@@ -241,6 +242,7 @@ h1 {
     margin: 2em auto;
     background: rgba(255, 255, 255, 0.836);
     border-radius: 10px;
+    padding: .5em;
   }
 
   img {

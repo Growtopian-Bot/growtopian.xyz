@@ -80,7 +80,7 @@ export default {
     };
   },
   mounted() {
-    document.body.style.backgroundColor = "#67a8f0";
+    document.body.style.backgroundColor = "#009de0";
   },
   methods: {
     setKey(key) {
@@ -193,6 +193,7 @@ h3 {
         width: 100%;
         font-size: 25px;
         cursor: text;
+        outline: none;
       }
 
       ::placeholder, -ms-input-placeholder, -ms-input-placeholder {

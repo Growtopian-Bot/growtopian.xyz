@@ -31,7 +31,7 @@ export default {
         }
     },
     mounted() {
-    document.body.style.backgroundColor = "#67a8f0";
+    document.body.style.backgroundColor = "#009de0";
   }
 }
 </script>

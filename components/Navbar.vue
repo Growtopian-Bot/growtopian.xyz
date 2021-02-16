@@ -1,10 +1,11 @@
 <template>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-    <div class="navbar-collapse collapse w-100 order-1 order-xl-0 dual-collapse2">
+
+    <div class="order-0 mx-auto">
+            <NuxtLink class="navbar-brand mx-auto" to="/"><h2>Growtopian</h2></NuxtLink>
+    </div>
+        <div class="navbar-collapse collapse links w-100 order-1 order-xl-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <NuxtLink class="nav-link" to="/">Growtopian Bot</NuxtLink>
-            </li>
             <li class="nav-item">
                 <a href="/#servers" class="nav-link">Public Servers</a>
             </li>
@@ -14,16 +15,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="https://discord.gg/mPKz9gV" target="#">Support Server</a>
             </li>
+            <li class="nav-item">
+                <NuxtLink class="nav-link" to="/premium">Premium</NuxtLink>
+            </li>
         </ul>
     </div>
-    <button class="navbar-toggler" data-toggle="collapse" data-target=".dual-collapse2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="order-0 mx-auto">
-        
-            <NuxtLink class="navbar-brand mx-auto" to="/"><h2>Growtopian<img src="~/assets/verf.webp" alt="verified-icon"></h2></NuxtLink>
-    </div>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <div class="navbar-collapse collapse order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="btn btn-danger" href="https://patreon.com/growtopian" target="#">Patreon</a>
@@ -33,6 +30,9 @@
             </li>
         </ul>
     </div>
+        <button class="navbar-toggler" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
     <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -64,9 +64,29 @@
 </template>
 
 <style lang="scss" scoped>
+
+.links {
+    width: 100%;
+     ul {
+         margin: 0 auto;
+
+         li a {
+             margin: 0 1em 0 1em;
+         }
+     }
+}
+
+.navbar-toggler {
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+}
+
 .navbar {
-    background-color: rgb(103,168,240) !important;
+    background-color: #009de0 !important;
+    border: none;
     font-weight: bold;
+    padding: .5rem 5rem;
 
     .navbar-nav.mr-auto .nav-item a {
         color: #ffffff;
@@ -99,6 +119,7 @@ a.btn {
   background-color: rgb(36, 83, 119);
   color: white;
   font-weight: bold;
+  white-space: nowrap;
 
   &:hover {
     background-color: rgba(70, 131, 180, 0.671);
@@ -110,6 +131,10 @@ a.btn {
         .navbar-nav {
             flex-direction: row;
         }
+    }
+
+    .navbar {
+           padding: .5rem 3rem;
     }
 }
 
