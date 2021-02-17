@@ -243,12 +243,12 @@ h3 {
 }
 
 .bars {
-  margin: 3em;
   display: block;
   
 
   .bar-left {
-    width: 300px;
+    margin-left: 5em;
+    width: auto;
     border: 1px black solid;
     box-shadow: 3px 3px 3px black;
   }
@@ -281,5 +281,10 @@ h3 {
     .bars {
       margin: 3em 2em;
     }
+
+    .bar-left {
+      margin-left: auto !important;
+    }
+
 }
 </style>

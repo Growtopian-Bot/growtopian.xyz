@@ -1,10 +1,10 @@
 <template>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
 
-    <div class="order-0 mx-auto">
-            <NuxtLink class="navbar-brand mx-auto" to="/"><h2>Growtopian</h2></NuxtLink>
+    <div class="order-0">
+            <NuxtLink class="navbar-brand" to="/"><h2>Growtopian</h2></NuxtLink>
     </div>
-        <div class="navbar-collapse collapse links w-100 order-1 order-xl-0 dual-collapse2">
+        <div class="navbar-collapse collapse links w-100 order-1 order-xl-0 dual-collapse2 mx-auto">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a href="/#servers" class="nav-link">Public Servers</a>
@@ -76,6 +76,7 @@
      }
 }
 
+
 .navbar-toggler {
     outline: none;
     border: none;
@@ -99,7 +100,6 @@
 }
 
 .navbar-brand {
-    vertical-align: middle;
     text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -134,8 +134,9 @@ a.btn {
     }
 
     .navbar {
-           padding: .5rem 3rem;
+        padding: .5em 1em;
     }
+
 }
 
 </style>

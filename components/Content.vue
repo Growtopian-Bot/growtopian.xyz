@@ -88,6 +88,10 @@ $font-2: "PF BeauSans Pro", sans-serif;
   animation-duration: 80s;
   -webkit-animation-duration: 80s;
   animation-iteration-count: infinite;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 
@@ -235,10 +239,6 @@ h1 {
   }
 
   @media only screen and (max-width: 600px) {
-
-    #cloud1 {
-      display: none;
-    }
 
     .buttons {
       a.btn {
