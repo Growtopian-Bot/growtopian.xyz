@@ -74,6 +74,29 @@ export default {
 $font-1: "Roboto", sans-serif;
 $font-2: "PF BeauSans Pro", sans-serif;
 
+
+.jumbotron::before {
+  content: url('~assets/cloud.webp');
+  width: 700px;
+  position: absolute;
+  height: auto;
+  top: 20%;
+  animation: linear;
+  -webkit-animation: linear;
+  animation-name: run;
+  -webkit-animation-name: run;
+  animation-duration: 80s;
+  -webkit-animation-duration: 80s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes run {
+  0% { left: 0; }
+  50% { left: 100%; }
+  100% { left: 0; }
+}
+
 .buttons {
   a.btn {
     margin: 24px;
@@ -212,6 +235,11 @@ h1 {
   }
 
   @media only screen and (max-width: 600px) {
+
+    #cloud1 {
+      display: none;
+    }
+
     .buttons {
       a.btn {
         margin: 24px 0;
