@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="jumbotron">
-      <img class="logo" src="~/assets/growtopian.webp" alt="logo" />
+      <img class="logo" src="/growtopian.png" alt="logo" />
       <h2>Growtopia Themed Discord Bot</h2>
       <div class="info">
         <p>
@@ -31,7 +31,7 @@
             >
             <div class="title">
               <img
-                src="~/assets/partnered.webp"
+                src="~/assets/partnered.png"
                 v-if="server.partnered"
                 class="partner"
                 alt="partner-icon"
@@ -75,19 +75,41 @@ $font-1: "Roboto", sans-serif;
 $font-2: "PF BeauSans Pro", sans-serif;
 
 
-.jumbotron::before {
-  content: url('~assets/cloud.webp');
+.jumbotron::after {
+  content: url('~assets/cloud.png');
   width: 700px;
   position: absolute;
   height: auto;
-  top: 20%;
+  top: 10%;
   animation: linear;
   -webkit-animation: linear;
   animation-name: run;
   -webkit-animation-name: run;
-  animation-duration: 80s;
-  -webkit-animation-duration: 80s;
+  animation-duration: 160s;
+  -webkit-animation-duration: 160s;
   animation-iteration-count: infinite;
+  z-index: 0;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.buttons::before {
+  content: url('~assets/cloud.png');
+  width: 300px;
+  position: absolute;
+  height: auto;
+  bottom: 15%;
+  filter: drop-shadow( 2px  0 white);
+  animation: linear;
+  -webkit-animation: linear;
+  animation-name: run;
+  -webkit-animation-name: run;
+  animation-duration: 160s;
+  -webkit-animation-duration: 160s;
+  animation-iteration-count: infinite;
+  z-index: -1;
 
   @media only screen and (max-width: 600px) {
     display: none;
@@ -102,6 +124,8 @@ $font-2: "PF BeauSans Pro", sans-serif;
 }
 
 .buttons {
+      position: relative;
+      z-index: 0;
   a.btn {
     margin: 24px;
     width: 20em;
@@ -224,7 +248,7 @@ h1 {
 
 .jumbotron {
   background-color: #00a8ea;
-  background-image: url("~assets/bg.webp");
+  background-image: url("~assets/bg.jpg");
   background-position-y: 5%;
   border-radius: 0;
   font-family: $font-1;
@@ -234,7 +258,10 @@ h1 {
   min-height: 79vh;
   height: fit-content;
 
+
   img.logo {
+    z-index: 1;
+    position: relative;
     width: 8em;
   }
 

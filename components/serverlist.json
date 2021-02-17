@@ -1,20 +1,20 @@
 [
     {
         "name": "Growtopia Official Server",
-        "img": "/gtofficial.webp",
+        "img": "/gt.jpg",
         "invite": "https://discord.gg/growtopia",
         "partnered": true,
         "description": "Growtopia is a free-to-play sandbox MMO game with almost endless possibilities! Join now!"
     },
     {
-        "name": "Growtopian Bot Server",
-        "img": "/gtbot.webp",
+        "name": "Growtopian Community",
+        "img": "/growtopian.png",
         "invite": "https://discord.com/invite/mPKz9gV",
         "description": "Official server for Growtopian Discord Bot"
     },
     {
         "name": "STYXSQUAD",
-        "img": "/styxsquad.webp",
+        "img": "/styx.jpg",
         "invite": "https://discord.com/invite/a7wKDRC",
         "description": "We prioritise to create a welcoming and positive environment where gamers can find new friends and share their interests and talents."
     }
