@@ -240,15 +240,11 @@ nav hr {
   .navbar nav a {
     font-size: 1em;
     padding: 0.1em 1em;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .navbar ul.primary-nav {
     margin: 0 auto;
-  }
-
-  li.current {
-    font-weight: bold;
   }
 
   .navbar.shadow-area::after {
