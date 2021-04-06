@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <div class="jumbotron">
-      <img class="logo" src="/growtopian.png" alt="logo" />
+    <div lazy-background="~/assets/bg.jpg" class="jumbotron" v-lazy-load>
+      <img class="logo" data-src="/growtopian.png" alt="logo" v-lazy-load />
       <h2>Growtopia Themed Discord Bot</h2>
       <div class="info">
         <p>
@@ -11,8 +11,8 @@
       <div class="buttons">
         <a
           class="btn invite btn-info"
-          data-toggle="modal"
-          data-target="#myModal"
+          href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
+          target="_blank"
           ><span><img src="~/assets/discord-logo.svg" alt="discord-logo" /> Add To Server</span></a
         >
         <router-link class="btn btn-info" to="/commands"
@@ -47,7 +47,27 @@
 </template>
 
 <script>
-import serverList from "./serverlist.json";
+const serverList = [
+    {
+        "name": "Growtopia Official Server",
+        "img": "/gt.jpg",
+        "invite": "https://discord.gg/growtopia",
+        "partnered": true,
+        "description": "Growtopia is a free-to-play sandbox MMO game with almost endless possibilities! Join now!"
+    },
+    {
+        "name": "Growtopian Community",
+        "img": "/growtopian.png",
+        "invite": "https://discord.com/invite/mPKz9gV",
+        "description": "Official server for Growtopian Discord Bot"
+    },
+    {
+        "name": "STYXSQUAD",
+        "img": "/styx.jpg",
+        "invite": "https://discord.com/invite/a7wKDRC",
+        "description": "We prioritise to create a welcoming and positive environment where gamers can find new friends and share their interests and talents."
+    }
+]
 
 export default {
   data() {
@@ -248,7 +268,6 @@ h1 {
 
 .jumbotron {
   background-color: #00a8ea;
-  background-image: url("~assets/bg.jpg");
   background-position-y: 5%;
   border-radius: 0;
   font-family: $font-1;

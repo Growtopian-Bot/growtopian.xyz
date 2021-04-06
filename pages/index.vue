@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 export default {
     mounted() {
     document.body.style.backgroundColor = "#ffffff";
