@@ -5,6 +5,7 @@
       class="panel panel-default collapsed"
       v-bind:href="'#collapse' + ukey"
       v-if="command.name"
+      @click="toggle"
     >
       <h5>
         {{ command.name
@@ -16,7 +17,7 @@
         />
       </h5>
       {{ command.desc }}
-      <div v-bind:id="'collapse' + ukey" class="panel-collapse collapse">
+      <div ref="collapsed" v-bind:id="'collapse' + ukey" class="panel-collapse collapse">
         <div class="panel-body">
           <div class="usage">
             <h6>USAGE</h6>
@@ -44,7 +45,14 @@
 
 <script>
 export default {
-    props: ['command', 'ukey']
+    props: ['command', 'ukey'],
+    methods: {
+      toggle: function() {
+        let element = this.$refs.collapsed;
+        element.parentNode.setAttribute("aria-expanded", !element.classList.contains('show'));
+        element.classList.toggle("show");
+      }
+    }
 }
 </script>
 
