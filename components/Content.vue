@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div lazy-background="~/assets/bg.jpg" class="jumbotron" v-lazy-load>
+    <div lazy-background="~/assets/bg-min.jpg" class="jumbotron" v-lazy-load>
       <img class="logo" data-src="/growtopian.png" alt="logo" v-lazy-load />
       <h2>Growtopia Themed Discord Bot</h2>
       <div class="info">
