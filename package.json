@@ -17,7 +17,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^2.4.0",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "node-sass": "^5.0.0",
+    "push-dir": "^0.4.1",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"
   }
