@@ -1,11 +1,13 @@
 <template>
   <div class="content">
-    <div lazy-background="~/assets/bg-min.jpg" class="jumbotron" v-lazy-load>
-      <img class="logo" data-src="/icon.png" alt="logo" v-lazy-load />
-      <h2>Growtopia Themed Discord Bot</h2>
+    <div class="jumbotron">
+      <img class="logo" src="/icon.png" alt="logo" />
+      <h1>Growtopia Themed Discord Bot</h1>
       <div class="info">
         <p>
-          Growtopian is an economy-bot that will make your time fun while grinding for gems. Oh yeah, it also has lots of great tools for players of game Growtopia!
+          Growtopian is an economy-bot that will make your time fun while
+          grinding for gems. Oh yeah, it also has lots of great tools for
+          players of game Growtopia!
         </p>
       </div>
       <div class="buttons">
@@ -13,7 +15,10 @@
           class="btn invite"
           href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
           target="_blank"
-          ><span><img src="~/assets/discord-logo.svg" alt="discord-logo" /> Add To Server</span></a
+          ><span
+            ><img src="~/assets/discord-logo.svg" alt="discord-logo" /> Add To
+            Server</span
+          ></a
         >
         <router-link class="btn btn-commands" to="/commands"
           ><span>Commands</span></router-link
@@ -48,33 +53,35 @@
 
 <script>
 const serverList = [
-    {
-        "name": "Growtopia Official Server",
-        "img": "/gt.jpg",
-        "invite": "https://discord.gg/growtopia",
-        "partnered": true,
-        "description": "Growtopia is a free-to-play sandbox MMO game with almost endless possibilities! Join now!"
-    },
-    {
-        "name": "Growtopian Community",
-        "img": "/icon.png",
-        "invite": "https://discord.com/invite/mPKz9gV",
-        "description": "Official server for Growtopian Discord Bot"
-    },
-    {
-        "name": "STYXSQUAD",
-        "img": "/styx.jpg",
-        "invite": "https://discord.com/invite/a7wKDRC",
-        "description": "We prioritise to create a welcoming and positive environment where gamers can find new friends and share their interests and talents."
-    }
-]
+  {
+    name: "Growtopia Official Server",
+    img: "/gt.jpg",
+    invite: "https://discord.gg/growtopia",
+    partnered: true,
+    description:
+      "Growtopia is a free-to-play sandbox MMO game with almost endless possibilities! Join now!",
+  },
+  {
+    name: "Growtopian Community",
+    img: "/icon.png",
+    invite: "https://discord.com/invite/mPKz9gV",
+    description: "Official server for Growtopian Discord Bot",
+  },
+  {
+    name: "STYXSQUAD",
+    img: "/styx.jpg",
+    invite: "https://discord.com/invite/a7wKDRC",
+    description:
+      "We prioritise to create a welcoming and positive environment where gamers can find new friends and share their interests and talents.",
+  },
+];
 
 export default {
   data() {
     return {
-      sv: serverList
+      sv: serverList,
     };
-  }
+  },
 };
 </script>
 
@@ -92,7 +99,7 @@ export default {
 }
 
 .jumbotron::after {
-  content: url('~assets/cloud.png');
+  content: url("~assets/cloud.png");
   width: 700px;
   position: absolute;
   height: auto;
@@ -111,14 +118,13 @@ export default {
   }
 }
 
-
 .buttons::before {
-  content: url('~assets/cloud.png');
+  content: url("~assets/cloud.png");
   width: 300px;
   position: absolute;
   height: auto;
   bottom: 15%;
-  filter: drop-shadow( 2px  0 white);
+  filter: drop-shadow(2px 0 white);
   animation: linear;
   -webkit-animation: linear;
   animation-name: run;
@@ -133,16 +139,21 @@ export default {
   }
 }
 
-
 @keyframes run {
-  0% { left: 0; }
-  50% { left: 100%; }
-  100% { left: 0; }
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 .buttons {
-      position: relative;
-      z-index: 0;
+  position: relative;
+  z-index: 0;
   a.btn {
     margin: 24px;
     width: 20em;
@@ -174,10 +185,6 @@ export default {
       }
     }
   }
-}
-
-h1 {
-  font-weight: bold;
 }
 
 #servers {
@@ -264,13 +271,14 @@ h1 {
 }
 
 .jumbotron {
+  user-select: none;
+  background-image: url('~/assets/bg-min.jpg');
   background-color: #00a8ea;
   background-position-y: 5%;
   text-align: center;
   background-size: cover;
   min-height: 79vh;
   height: fit-content;
-
 
   img.logo {
     margin: 3em 0 0 0;
@@ -280,6 +288,7 @@ h1 {
   }
 
   @media only screen and (max-width: 600px) {
+    height: fit-content;
 
     .buttons {
       a.btn {
@@ -290,20 +299,15 @@ h1 {
     img.logo {
       margin-top: 1em;
     }
+  }
 
-    h2 {
+    h1 {
       margin-top: 0.5em;
+      font-size: 3em;
+      color: white;
+      font-family: "PF BeauSans Pro", sans-serif;
+      text-shadow: 5px 5px rgba($color: #000000, $alpha: 0.5);
     }
-
-    height: fit-content;
-  }
-
-  h2 {
-    font-size: 3em;
-    color: white;
-    font-family: "PF BeauSans Pro", sans-serif;
-    text-shadow: 5px 5px rgba($color: #000000, $alpha: 0.5);
-  }
 
   .info {
     width: 85%;
@@ -313,7 +317,7 @@ h1 {
     margin: 2em auto;
     background: rgba(255, 255, 255, 0.836);
     border-radius: 10px;
-    padding: .5em;
+    padding: 0.5em;
   }
 
   img {

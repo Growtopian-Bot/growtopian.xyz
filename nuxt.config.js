@@ -1,6 +1,6 @@
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
+  ssr: true,
 
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -44,6 +44,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/pwa'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -53,6 +54,7 @@ export default {
       path: '/sitemap.xml',
       routes: [
         '/',
+        '/rules',
         '/commands',
         '/premium'
       ]
@@ -60,7 +62,6 @@ export default {
     ['nuxt-lazy-load', {
       directiveOnly: true
     }],
-    '@nuxtjs/pwa'
   ],
 
   pwa: {
@@ -71,7 +72,7 @@ export default {
       background_color: '#f2f2f2',
       lang: 'en',
       description: 'Growtopian Bot\'s app to access its website in one click!',
-      useWebmanifestExtension: false
+      start_url: '/commands'
     }
   },
 
