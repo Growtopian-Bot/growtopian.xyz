@@ -63,6 +63,18 @@ export default {
     '@nuxtjs/pwa'
   ],
 
+  pwa: {
+    manifest: {
+      name: 'Growtopian',
+      short_name: 'Growtopian',
+      theme_color: '#77a9ed',
+      background_color: '#f2f2f2',
+      lang: 'en',
+      description: 'Growtopian Bot\'s app to access its website in one click!',
+      useWebmanifestExtension: false
+    }
+  },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
