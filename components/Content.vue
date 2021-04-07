@@ -10,12 +10,12 @@
       </div>
       <div class="buttons">
         <a
-          class="btn invite btn-info"
+          class="btn invite"
           href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
           target="_blank"
           ><span><img src="~/assets/discord-logo.svg" alt="discord-logo" /> Add To Server</span></a
         >
-        <router-link class="btn btn-info" to="/commands"
+        <router-link class="btn btn-commands" to="/commands"
           ><span>Commands</span></router-link
         >
       </div>
@@ -91,10 +91,6 @@ export default {
   font-display: swap;
 }
 
-$font-1: "Roboto", sans-serif;
-$font-2: "PF BeauSans Pro", sans-serif;
-
-
 .jumbotron::after {
   content: url('~assets/cloud.png');
   width: 700px;
@@ -114,6 +110,7 @@ $font-2: "PF BeauSans Pro", sans-serif;
     display: none;
   }
 }
+
 
 .buttons::before {
   content: url('~assets/cloud.png');
@@ -269,16 +266,14 @@ h1 {
 .jumbotron {
   background-color: #00a8ea;
   background-position-y: 5%;
-  border-radius: 0;
-  font-family: $font-1;
   text-align: center;
   background-size: cover;
-  justify-content: center;
   min-height: 79vh;
   height: fit-content;
 
 
   img.logo {
+    margin: 3em 0 0 0;
     z-index: 1;
     position: relative;
     width: 8em;
@@ -306,11 +301,13 @@ h1 {
   h2 {
     font-size: 3em;
     color: white;
-    font-family: $font-2;
+    font-family: "PF BeauSans Pro", sans-serif;
     text-shadow: 5px 5px rgba($color: #000000, $alpha: 0.5);
   }
 
   .info {
+    width: 85%;
+    font-weight: 300;
     font-size: 20px;
     max-width: 800px;
     margin: 2em auto;

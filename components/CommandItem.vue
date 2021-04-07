@@ -7,7 +7,7 @@
       v-if="command.name"
       @click="toggle"
     >
-      <h5>
+      <h3>
         {{ command.name
         }}<img
           src="~assets/star.svg"
@@ -15,7 +15,7 @@
           title="Donor Command"
           v-if="command.donor"
         />
-      </h5>
+      </h3>
       {{ command.desc }}
       <div ref="collapsed" v-bind:id="'collapse' + ukey" class="panel-collapse collapse">
         <div class="panel-body">
@@ -62,7 +62,7 @@ $bgColor-2: #2d6187;
 
 
 a.btn {
-  font-weight: bold;
+  font-weight: 300;
   transition: 0.4s;
   font-size: 1.5em;
 }
@@ -75,22 +75,33 @@ a.btn {
   cursor: pointer;
   color: white;
   border: 1px #0741ff solid;
+  font-weight: 300;
+  
 
   &[aria-expanded="true"] {
     border: 1px #07daff solid;
   }
 
-  .panel-body {
+  & .show.panel-collapse {
+    display: block;
+  }
+
+  & .panel-collapse {
+    display: none;
+  }
+
+  & .panel-body {
     margin-top: 0.8em;
     border-radius: 5px;
     background-color: rgba(0, 73, 116, 0.651);
     color: rgb(233, 233, 233);
     padding: 0.5em;
     border: 3px rgba(92, 140, 230, 0.466) solid;
+
   }
 
-  h5 {
-    margin-bottom: 2px;
+  h3 {
+    margin: 0 0 .2em;
     font-weight: 600;
     color: #dad9ad;
 
@@ -101,10 +112,13 @@ a.btn {
   }
 
   .usage {
-    line-height: 1em;
+
+    h6 {
+      margin: 0 0 .5rem
+    }
 
     p {
-      margin-bottom: 0;
+      margin: 0;
     }
   }
 

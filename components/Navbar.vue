@@ -26,9 +26,7 @@
           </li>
           <li><NuxtLink to="/commands">Commands</NuxtLink></li>
           <li>
-            <a href="https://discord.gg/mPKz9gV" target="#"
-              >Support Server</a
-            >
+            <a href="https://discord.gg/mPKz9gV" target="#">Support Server</a>
           </li>
           <li><NuxtLink to="/premium">Premium</NuxtLink></li>
         </ul>
@@ -43,7 +41,12 @@
             >
           </li>
           <li>
-            <a class="addsv-cta" href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV" target="_blank">Add To Server</a>
+            <a
+              class="addsv-cta"
+              href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
+              target="_blank"
+              >Add To Server</a
+            >
           </li>
         </ul>
       </nav>
@@ -55,13 +58,13 @@
 export default {
   data() {
     return {
-      navMenu: false
+      navMenu: false,
     };
   },
   methods: {
     toggleNav: function () {
       this.navMenu = !this.navMenu;
-    }
+    },
   },
 };
 </script>
@@ -73,7 +76,7 @@ export default {
 }
 
 .nav-logo {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #myModal {
@@ -85,7 +88,6 @@ export default {
   color: white;
   font-weight: bold;
   white-space: nowrap;
-  padding: 6px 12px;
 
   &:hover {
     background-color: rgba(70, 131, 180, 0.671);
@@ -98,7 +100,6 @@ export default {
   color: white;
   font-weight: bold;
   white-space: nowrap;
-  padding: 6px 12px;
 
   &:hover {
     background-color: rgb(253, 107, 107);
@@ -111,6 +112,12 @@ export default {
   font-weight: bold;
   color: white;
   font-size: 1.2em;
+
+  h2 {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 nav.menu-btn {
@@ -156,6 +163,7 @@ nav hr {
 .navbar .cont {
   display: flex;
   place-content: space-between;
+  align-items: center;
   margin: 0 auto;
   width: 100%;
 }
@@ -179,6 +187,7 @@ nav hr {
   padding: 0.5em;
   font-size: 1.3em;
   text-align: left;
+  text-decoration: none;
 }
 
 .mobile-menu {
@@ -196,8 +205,8 @@ nav hr {
 }
 
 .secondary-nav a {
-  color: white !important;
-  padding: 6px 12px !important;
+  color: white;
+  padding: 6px 12px;
   border-radius: 5px;
   text-decoration: none;
   margin: 1em auto;
@@ -209,17 +218,20 @@ nav hr {
     display: none;
   }
 
-    .secondary-nav a{
-          margin: 0 auto;
-    }
-  .patreon-cta {
-    margin-right: 10px !important;
+  .navbar li a {
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+
+  .secondary-nav a {
+    margin: 0 10px;
   }
 
   .navbar .cont {
     display: grid;
     grid-template-columns: 180px auto;
     justify-content: unset;
+    align-items: center;
     width: 90%;
   }
 
@@ -237,7 +249,7 @@ nav hr {
     display: flex;
   }
 
-  .navbar nav a {
+  .navbar .primary-nav a {
     font-size: 1em;
     padding: 0.1em 1em;
     font-weight: 700;
