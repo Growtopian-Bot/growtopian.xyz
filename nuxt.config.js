@@ -59,7 +59,8 @@ export default {
     }],
     ['nuxt-lazy-load', {
       directiveOnly: true
-    }]
+    }],
+    '@nuxtjs/pwa'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

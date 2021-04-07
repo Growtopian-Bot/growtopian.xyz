@@ -27,6 +27,7 @@
     "nuxt-lazy-load": "^1.2.5"
   },
   "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
     "node-sass": "^5.0.0",
     "push-dir": "^0.4.1",
     "sass": "^1.29.0",
