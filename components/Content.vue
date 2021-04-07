@@ -57,7 +57,7 @@ const serverList = [
     },
     {
         "name": "Growtopian Community",
-        "img": "/growtopian.png",
+        "img": "/icon-192x192.png",
         "invite": "https://discord.com/invite/mPKz9gV",
         "description": "Official server for Growtopian Discord Bot"
     },
