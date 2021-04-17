@@ -291,7 +291,9 @@ export default {
   }
 
     h1 {
-      margin-top: 0.5em;
+      display: inline-block;
+      width: calc(100% - 50px);
+      margin: 0.5em 0 0;
       font-size: 3em;
       color: white;
       font-family: 'Hammersmith One', sans-serif;
