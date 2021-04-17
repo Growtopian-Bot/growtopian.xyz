@@ -22,12 +22,11 @@
           <div class="usage">
             <h6>USAGE</h6>
             <div v-if="!command.usage">/{{ command.name }}</div>
-            <p
-              style="white-space: pre-line; line-height: 1.6"
+            <span class="usage-text"
               v-if="command.usage"
             >
               {{ command["usage"] }}
-            </p>
+            </span>
           </div>
         </div>
       </div>
@@ -117,8 +116,12 @@ a.btn {
       margin: 0 0 .5rem
     }
 
-    p {
+    span.usage-text {
       margin: 0;
+      white-space: pre-line;
+      line-height: 25px;
+      position: relative;
+      top: -12px;
     }
   }
 

@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="'navbar' + (navMenu ? ' shadow-area' : '')">
     <div class="cont">
-      <NuxtLink class="logo" to="/"><h2>Growtopian</h2></NuxtLink>
+      <NuxtLink class="logo" to="/"><h1>Growtopian</h1></NuxtLink>
 
       <img
         id="mobile-cta"
@@ -12,16 +12,18 @@
       />
 
       <nav v-bind:class="navMenu ? 'menu-btn' : ''" @click="toggleNav">
+        <div class="nav-head">
         <img
           id="mobile-exit"
           class="mobile-menu-exit"
           src="~/assets/close.png"
           alt="close menu"
         />
-        <NuxtLink class="nav-logo" to="/"><h2>Growtopian</h2></NuxtLink>
+        <NuxtLink class="nav-logo" to="/"><h1>Growtopian</h1></NuxtLink>
+        </div>
         <hr />
         <ul class="primary-nav">
-          <li class="current">
+          <li>
             <NuxtLink to="/#servers">Public Servers</NuxtLink>
           </li>
           <li><NuxtLink to="/commands">Commands</NuxtLink></li>
@@ -72,11 +74,26 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   background: #009de0;
-  padding: 1em;
+  padding: .5em .8em;
+}
+
+@keyframes animate {
+  from {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .nav-logo {
   text-decoration: none;
+  display: inline-block;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
 }
 
 #myModal {
@@ -111,10 +128,9 @@ export default {
   text-decoration: none;
   font-weight: bold;
   color: white;
-  font-size: 1.2em;
 
-  h2 {
-    display: inline;
+  h1 {
+    display: inline-block;
     padding: 0;
     margin: 0;
   }
@@ -122,13 +138,15 @@ export default {
 
 nav.menu-btn {
   display: block;
+  animation: animate 0.2s;
+  border-radius: 15px 0 0 15px;
 }
 
 nav {
   position: fixed;
   z-index: 999;
   width: 70%;
-  height: 100vh;
+  height: calc(100vh - 2rem);
   right: 0;
   top: 0;
   background: #f2f2f2;
@@ -180,6 +198,10 @@ nav hr {
 
 .primary-nav a {
   color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .navbar li a {
@@ -216,6 +238,10 @@ nav hr {
   .mobile-menu-exit,
   .mobile-menu {
     display: none;
+  }
+
+  .navbar {
+    padding: 1em;
   }
 
   .navbar li a {
@@ -274,10 +300,18 @@ nav hr {
 
   nav {
     border: none;
+
+    .menu-btn {
+      animation: none;
+    }
+
+    li {
+      margin-top: 5px;
+    }
   }
 
   nav hr,
-  nav h2 {
+  nav h1 {
     display: none;
   }
 }

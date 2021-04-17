@@ -86,17 +86,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
-@font-face {
-  font-family: "PF BeauSans Pro";
-  font-style: normal;
-  font-weight: 700;
-  src: local("PF BeauSans Pro"),
-    url("https://fonts.cdnfonts.com/s/12902/UFONTS.COM_PFBEAUSANSPRO-BOLD.woff")
-      format("woff");
-  font-display: swap;
-}
 
 .jumbotron::after {
   content: url("~assets/cloud.png");
@@ -305,7 +294,7 @@ export default {
       margin-top: 0.5em;
       font-size: 3em;
       color: white;
-      font-family: "PF BeauSans Pro", sans-serif;
+      font-family: 'Hammersmith One', sans-serif;
       text-shadow: 5px 5px rgba($color: #000000, $alpha: 0.5);
     }
 
