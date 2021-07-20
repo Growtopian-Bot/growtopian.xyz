@@ -8,12 +8,8 @@
         Growtopian is in no way affiliated with Ubisoft Entertainment, Growtopia
         or Discord Inc.
         <div class="buttons">
-          <a class="btn btn-light" data-toggle="modal" data-target="#myModal"
-            >Invite Bot</a
-          >
-          <a class="btn btn-light" href="https://discord.gg/mPKz9gV"
-            >Join Support Server</a
-          >
+          <Button class="btn btn--discord" label="Invite Bot" data-toggle="modal" data-target="#myModal" />
+          <Button class="btn btn--join" label="Join Support Server" path="https://discord.gg/mPKz9gV" />
         </div>
       </div>
       <div class="links">
@@ -32,6 +28,11 @@
 </template>
 
 <style lang="scss" scoped>
+
+@use '~@growstocks/stack/Core/Shape';
+
+@import '~assets/scss/button-theme';
+
 .flex {
   display: flex;
   color: rgb(153, 170, 181);
@@ -44,8 +45,11 @@
   font-weight: 300;
 
   .btn {
-    margin: 1em 0.5em;
+    margin: 1rem 0 0 0;
+    padding: 6px 12px;
     font-size: 1rem;
+
+    @include Shape.apply($_shape-theme-nav);
   }
 
   h5,
@@ -54,7 +58,7 @@
     margin: .5em 0;
     color: whitesmoke;
   }
-  
+
   .links {
     margin-left: 1em;
   }

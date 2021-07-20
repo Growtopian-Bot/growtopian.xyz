@@ -1,7 +1,9 @@
 <template>
-  <div v-bind:class="'navbar' + (navMenu ? ' shadow-area' : '')">
+  <header v-bind:class="'header' + (navMenu ? ' shadow-area' : '')">
     <div class="cont">
-      <NuxtLink class="logo" to="/"><h1>Growtopian</h1></NuxtLink>
+      <NuxtLink class="header__logo" to="/">
+        <h1 class="header__title">Growtopian</h1>
+      </NuxtLink>
 
       <img
         id="mobile-cta"
@@ -35,25 +37,25 @@
 
         <ul class="secondary-nav">
           <li>
-            <a
-              class="patreon-cta"
-              href="https://patreon.com/growtopian"
+            <Button
+              class="btn btn--patreon"
+              path="https://patreon.com/growtopian"
               target="#"
-              >Patreon</a
-            >
+              label="Patreon"
+            />
           </li>
           <li>
-            <a
-              class="addsv-cta"
-              href="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
+            <Button
+              class="btn btn--discord"
+              path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
               target="_blank"
-              >Add To Server</a
-            >
+              label="Add To Server"
+            />
           </li>
         </ul>
       </nav>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -72,17 +74,71 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar {
+
+@use '~@growstocks/stack/Core/Elevation';
+@use '~@growstocks/stack/Core/Shape';
+
+@import '~assets/scss/button-theme';
+
+.header {
   background: #009de0;
   padding: .5em .8em;
-}
 
-@keyframes animate {
-  from {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  .header__logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+    .header__title {
+      font-family: 'Hammersmith One', sans-serif !important;
+      font-size: 2rem;
+      padding: 0;
+      margin: 0;
+    }
   }
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  &.shadow-area::after {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.555);
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
+
+  .cont {
+    display: flex;
+    place-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &.primary-nav {
+
+      a {
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  li a {
+    display: block;
+    padding: 0.5em;
+    font-size: 1.3em;
+    text-align: left;
+    text-decoration: none;
   }
 }
 
@@ -100,116 +156,35 @@ export default {
   display: block !important;
 }
 
-.addsv-cta {
-  background-color: rgb(36, 83, 119);
-  color: white;
-  font-weight: bold;
-  white-space: nowrap;
-
-  &:hover {
-    background-color: rgba(70, 131, 180, 0.671);
-    cursor: pointer;
-  }
-}
-
-.patreon-cta {
-  background-color: rgb(255, 49, 49);
-  color: white;
-  font-weight: bold;
-  white-space: nowrap;
-
-  &:hover {
-    background-color: rgb(253, 107, 107);
-    cursor: pointer;
-  }
-}
-
-.navbar .logo {
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-
-  h1 {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-nav.menu-btn {
-  display: block;
-  animation: animate 0.2s;
-  border-radius: 15px 0 0 15px;
-}
-
 nav {
   position: fixed;
   z-index: 999;
   width: 70%;
-  height: calc(100vh - 2rem);
+  height: 100vh;
   right: 0;
   top: 0;
   background: #f2f2f2;
   padding: 1em;
   display: none;
   border-left: 1px solid rgba(207, 207, 207, 0.212);
-}
 
-nav h1 {
-  display: inline;
-}
-
-nav hr {
-  padding: 0;
-  width: 90%;
-  margin: 2em auto;
-  border: none;
-  border-top: 1px solid gray;
-}
-
-.navbar.shadow-area::after {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.555);
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 99;
-}
-
-.navbar .cont {
-  display: flex;
-  place-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul.primary-nav {
-  margin-top: 3em;
-}
-
-.primary-nav a {
-  color: black;
-
-  &:hover {
-    text-decoration: underline;
+  &.menu-btn {
+    display: block;
+    animation: animate 0.2s;
+    border-radius: 15px 0 0 0;
   }
-}
 
-.navbar li a {
-  display: block;
-  padding: 0.5em;
-  font-size: 1.3em;
-  text-align: left;
-  text-decoration: none;
+  h1 {
+    display: inline;
+  }
+
+  hr {
+    padding: 0;
+    width: 90%;
+    margin: 1em auto;
+    border: none;
+    border-top: 1px solid gray;
+  }
 }
 
 .mobile-menu {
@@ -226,12 +201,30 @@ nav hr {
   cursor: pointer;
 }
 
-.secondary-nav a {
-  color: white;
-  padding: 6px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin: 1em auto;
+.secondary-nav {
+  .btn {
+    padding: 6px 12px !important;
+    text-decoration: none;
+    margin: 1em auto;
+    font-size: 14px;
+
+    @include Shape.apply($_shape-theme-nav);
+  }
+
+  @media only screen and (min-width: 1072px) {
+    & > * + * {
+      margin-left: 10px;
+    }
+  }
+}
+
+@keyframes animate {
+  from {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 @media only screen and (min-width: 1072px) {
@@ -240,20 +233,16 @@ nav hr {
     display: none;
   }
 
-  .navbar {
+  .header {
     padding: 1em;
   }
 
-  .navbar li a {
+  .header li a {
     padding: 6px 12px;
     font-size: 18px;
   }
 
-  .secondary-nav a {
-    margin: 0 10px;
-  }
-
-  .navbar .cont {
+  .header .cont {
     display: grid;
     grid-template-columns: 180px auto;
     justify-content: unset;
@@ -261,9 +250,10 @@ nav hr {
     width: 90%;
   }
 
-  .navbar nav {
+  .header nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: unset;
     height: auto;
     width: 100%;
@@ -271,26 +261,26 @@ nav hr {
     background: unset;
   }
 
-  .navbar nav ul {
+  .header nav ul {
     display: flex;
   }
 
-  .navbar .primary-nav a {
+  .header .primary-nav a {
     font-size: 1em;
     padding: 0.1em 1em;
     font-weight: 700;
   }
 
-  .navbar ul.primary-nav {
+  .header ul.primary-nav {
     margin: 0 auto;
   }
 
-  .navbar.shadow-area::after {
+  .header.shadow-area::after {
     display: none;
   }
 
   .primary-nav a {
-    color: white;
+    color: white !important;
     text-decoration: none;
 
     &:hover {

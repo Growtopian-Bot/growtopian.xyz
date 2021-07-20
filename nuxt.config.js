@@ -26,7 +26,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" }
     ],
     script: []
