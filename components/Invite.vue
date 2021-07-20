@@ -18,7 +18,13 @@
 
 <style lang="scss" scoped>
 .buttons {
+  display: grid;
+  place-items: center;
   text-align: center;
   margin: 5em 0 5em 0;
+
+  .btn {
+    margin: 0.5rem;
+  }
 }
 </style>
