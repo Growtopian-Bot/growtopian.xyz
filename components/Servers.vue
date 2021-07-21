@@ -1,5 +1,5 @@
 <template>
-  <section class="servers">
+  <section id="#servers" class="servers">
     <TitleBar>Featured Servers</TitleBar>
     <div class="server-list">
       <div class="server" v-for="(server, key) in server" :key="key">

@@ -1,6 +1,6 @@
 <template>
 
-  <RouterLink v-if="routed" v-bind:class="{ styles }" v-bind:to="{ path }">
+  <RouterLink v-if="routed" :class="{ styles }" :to="{ path }">
     <span>{{ label }}</span>
   </RouterLink>
 
@@ -8,7 +8,7 @@
     v-else
     role="button"
   >
-    <a v-bind:href="{ path }">
+    <a :href="path">
       <img v-if="logo" src="~/assets/discord-logo.svg" alt="discord-logo"/>
       <span>{{ label }}</span>
     </a>
@@ -19,18 +19,28 @@
 <script>
 export default {
   name: "Button",
-  props: [
-    'routed',
-    'path',
-    'styles',
-    'label',
-    'logo'
-  ],
-  data() {
-    return {
-      logo: false
-    }
-  }
+  props: {
+    routed: {
+      type: Boolean,
+      default: false
+    },
+    styles: {
+      type: String,
+      default: ''
+    },
+    label: {
+      type: String,
+      default: ''
+    },
+    path: {
+      type: String,
+      default: ''
+    },
+    logo: {
+      type: Boolean,
+      default: false
+    },
+  },
 }
 </script>
 

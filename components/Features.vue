@@ -48,6 +48,16 @@ $font-1: 'PF BeauSans Pro', sans-serif;
         background-color: #99dfffa2;
     }
 
+  img {
+    &.shadowed,
+    &.img-fluid {
+      width: 100%;
+      object-fit: cover;
+      filter: drop-shadow(0 0px 8px black);
+      max-width: 540px;
+    }
+  }
+
     h4 {
         margin-top: 1.5em;
         font-weight: 100;
@@ -61,12 +71,6 @@ $font-1: 'PF BeauSans Pro', sans-serif;
         font-family: $font-1;
     }
 
-
-    img.shadowed {
-        object-fit: cover;
-        filter: drop-shadow(0 0px 8px black);
-    }
-
     @media only screen and (max-width: 880px) {
         h1 {
             margin-top: 1em;
@@ -75,9 +79,9 @@ $font-1: 'PF BeauSans Pro', sans-serif;
         h4 {
             margin-bottom: 2em;
         }
-        
+
         display: block;
-        
+
     }
 }
 
