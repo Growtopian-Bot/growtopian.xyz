@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @use '~@growstocks/stack/Core/Shape';
 @use '~@growstocks/stack/Core/Color';
@@ -53,7 +53,6 @@ export default {
 @import '~assets/scss/button-theme';
 
 .btn {
-  margin: 24px;
   width: 100%;
   max-width: 300px;
   padding: 12px 16px;
