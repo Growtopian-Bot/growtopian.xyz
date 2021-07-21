@@ -94,6 +94,7 @@ export default {
       font-size: 2rem;
       padding: 0;
       margin: 0;
+      text-shadow: 3px 3px rgba($color: #000000, $alpha: 0.5);
     }
   }
 

@@ -59,6 +59,7 @@ export default {
     background-size: cover;
     min-height: 79vh;
     height: fit-content;
+    padding-bottom: 25px;
 
     @media only screen and (max-width: 600px) {
       height: fit-content;
@@ -94,6 +95,10 @@ export default {
       text-shadow: 5px 5px rgba($color: #000000, $alpha: 0.5);
     }
 
+    .hero__motto {
+      width: 85%;
+    }
+
     .hero__icon {
       margin: 3em 0 0 0;
       z-index: 1;
@@ -111,18 +116,17 @@ export default {
 
     .hero__actions {
       width: calc(100% - 40px);
+      max-width: 1077px;
       margin: 0 auto;
       position: relative;
       z-index: 0;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: 20px;
 
       .btn {
         font-size: 20px!important;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .btn {
-          margin: 0 0 20px 0;
-        }
       }
 
       &::before {
