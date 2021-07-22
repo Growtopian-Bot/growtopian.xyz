@@ -88,13 +88,13 @@ export default {
       });
     },
     showAll() {
-      document.getElementsByClassName("panel-collapse").forEach((e) => {
+      document.getElementsByClassName("panel--collapse").forEach((e) => {
         e.parentNode.setAttribute("aria-expanded", true);
         e.classList.add("show");
       });
     },
     hideAll() {
-      document.getElementsByClassName("panel-collapse").forEach((e) => {
+      document.getElementsByClassName("panel--collapse").forEach((e) => {
         e.parentNode.setAttribute("aria-expanded", false);
         e.classList.remove("show");
       });

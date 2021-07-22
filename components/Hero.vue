@@ -17,13 +17,13 @@
         path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
         label="Add To Server"
         class="btn btn--invite"
-        logo="true"
+        has-logo
       />
       <Button
-        routed="true"
         path="/commands"
         label="Commands"
         class="btn"
+        is-routed
       />
     </div>
   </div>

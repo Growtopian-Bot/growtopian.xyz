@@ -5,13 +5,13 @@
       path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
       target="_blank"
       label="Add to Server"
-      logo="true"
+      has-logo
     />
     <Button
-      routed="true"
       class="btn"
       path="/commands"
       label="Commands"
+      is-routed
     />
   </div>
 </template>
