@@ -26,8 +26,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" }
+      { rel: "preload", as: "style", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap", onload: "this.onload=null;this.rel='stylesheet'" },
+      { rel: "preload", as: "style", href: "https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap", onload: "this.onload=null;this.rel='stylesheet'" }
     ],
     script: []
   },

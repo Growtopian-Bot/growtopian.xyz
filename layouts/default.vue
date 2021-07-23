@@ -18,9 +18,18 @@ $secondary:rgb(46, 161, 255);
       $primary,
       $secondary,
       $patreon: #FF424D,
-      $discord: rgb(89, 112, 191),
+      $discord: rgb(19, 51, 168),
       $join: #FFC107,
   );
+}
+
+body::-webkit-scrollbar {
+  background: var(--sc-theme--primary);
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sc-theme--discord);
 }
 
 * {

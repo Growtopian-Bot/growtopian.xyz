@@ -3,7 +3,7 @@
   <div class="hero">
 
     <img class="hero__icon" src="/icon.png" alt="logo"/>
-    <h1 class="hero__title">Growtopia Themed Discord Bot</h1>
+    <h1 class="hero__title">Growtopian - Discord Bot</h1>
     <Card class="hero__motto">
       Growtopian is an economy-bot that will make your time fun while
       grinding for gems.

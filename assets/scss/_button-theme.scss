@@ -1,6 +1,6 @@
 $_main-theme: (
-  'default': (var(--sc-theme--secondary), #000),
-  'hover': (var(--sc-theme--secondary-dark), #000),
+  'default': (var(--sc-theme--secondary), #fff),
+  'hover': (var(--sc-theme--secondary-dark), #fff),
   'elevation': #000,
 );
 
@@ -34,6 +34,6 @@ $_shape-theme: (
 
 $_shape-theme-nav: (
   'shape': rounded,
-  'border-radius': 5px !important
+  'border-radius': 5px
 );
 
