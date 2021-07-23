@@ -1,7 +1,6 @@
 <template>
   <div class="wrap">
     <div class="rules">
-      <hr />
       <h1>Growtopian Rules</h1>
       <p>
         By using Growtopian, you agree to these rules. If you break any rules,
@@ -66,40 +65,58 @@ body {
 }
 
 <style lang="scss" scoped>
+
+@use '~@growstocks/stack/Core/Color';
+
+@import '../assets/scss/commands-theme';
+
 .rules {
   text-align: center;
 
   h1 {
     margin-top: 1em;
-    color: #ffd900;
+    color: #ffb100;
+    text-shadow: 2px 2px #000;
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
   }
 
   p {
-    color: #ffecec;
-    margin-bottom: 6em;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+
+  & > * + * {
+    margin: 1rem auto 0 auto;
   }
 }
 
 .rule {
-  color: white;
-  background-color: #2d6187;
-  margin: 3rem auto;
   width: 70%;
   line-height: 1.6em;
   border-radius: 10px;
   padding: 1em;
+  font-size: 0.90rem;
+
+  @include Color.apply('filled', $_command-theme);
 
   h4 {
     font-size: 1.3rem;
-    margin-top: 0;
-    color: rgb(253, 192, 77);
+    margin: 0 0 5px 0;
+    color: #f6f598;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .rule {
     width: calc(100% - 80px);
-    margin: 15px auto;
+    margin: 15px auto 0 auto;
   }
 }
 </style>

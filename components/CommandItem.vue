@@ -2,7 +2,7 @@
   <div>
     <div
       data-toggle="collapse"
-      class="panel panel-default collapsed"
+      class="panel panel--default collapsed"
       v-bind:href="'#collapse' + ukey"
       v-if="command.name"
       @click="toggle"
@@ -17,12 +17,12 @@
         />
       </h3>
       {{ command.desc }}
-      <div ref="collapsed" v-bind:id="'collapse' + ukey" class="panel-collapse collapse">
-        <div class="panel-body">
+      <div ref="collapsed" v-bind:id="'collapse' + ukey" class="panel--collapse collapse">
+        <div class="panel--body">
           <div class="usage">
             <h6>USAGE</h6>
             <div v-if="!command.usage">/{{ command.name }}</div>
-            <span class="usage-text"
+            <span class="usage__text"
               v-if="command.usage"
             >
               {{ command["usage"] }}
@@ -32,12 +32,11 @@
       </div>
     </div>
     <div class="patreon" v-if="command.patreon">
-      <a
-        href="https://patreon.com/join/growtopian"
-        class="btn btn-block btn-danger"
-        target="_"
-        >Click to become Patron Now! 🚀</a
-      >
+      <Button
+        path="https://patreon.com/join/growtopian"
+        styles="btn btn--patreon"
+        label="Click to become Patron Now! 🚀"
+      />
     </div>
   </div>
 </template>
@@ -59,108 +58,74 @@ export default {
 $bgColor-1: #9aceff;
 $bgColor-2: #2d6187;
 
+@use '~@growstocks/stack/Core/Color';
+@use '~@growstocks/stack/Core/Elevation';
 
-a.btn {
-  font-weight: 300;
-  transition: 0.4s;
-  font-size: 1.5em;
-}
+$_command-theme: (
+  'default': (#2d6187, #fff),
+  'elevation': #000,
+);
 
-.panel.panel-default {
-  background-color: $bgColor-2;
-  margin-bottom: 0.5em;
-  padding: 6px;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-  border: 1px #0741ff solid;
-  font-weight: 300;
-  
+$_usage-theme: (
+  'default': (#152b48, #fff),
+  'elevation': #000,
+);
 
-  &[aria-expanded="true"] {
-    border: 1px #07daff solid;
-  }
-
-  & .show.panel-collapse {
-    display: block;
-  }
-
-  & .panel-collapse {
-    display: none;
-  }
-
-  & .panel-body {
-    margin-top: 0.8em;
+.panel {
+  &.panel--default {
+    margin-bottom: 0.5em;
+    padding: 10px;
     border-radius: 5px;
-    background-color: rgba(0, 73, 116, 0.651);
-    color: rgb(233, 233, 233);
-    padding: 0.5em;
-    border: 3px rgba(92, 140, 230, 0.466) solid;
+    cursor: pointer;
+    font-weight: 300;
 
-  }
+    @include Color.apply('filled', $_command-theme);
 
-  h3 {
-    margin: 0 0 .2em;
-    font-weight: 600;
-    color: #dad9ad;
-
-    img {
-      margin-left: 0.5em;
-      margin-top: -5px;
-    }
-  }
-
-  .usage {
-
-    h6 {
-      margin: 0 0 .5rem
+    & .show.panel--collapse {
+      display: block;
     }
 
-    span.usage-text {
-      margin: 0;
-      white-space: pre-line;
-      line-height: 25px;
-      position: relative;
-      top: -12px;
-    }
-  }
-
-}
-
-
-
-.jumbotron {
-  padding: 1em;
-  background-color: $bgColor-2;
-
-  &.bar-right {
-    background-color: transparent;
-    padding: 0;
-
-    #search {
-      background-color: #0a1366e5;
-      width: 100%;
-      font-size: 25px;
-      cursor: text;
-      outline: none;
+    & .panel--collapse {
+      display: none;
     }
 
-    ::placeholder,
-    -ms-input-placeholder,
-    -ms-input-placeholder {
-      color: rgba(228, 218, 200, 0.801);
+    & .panel--body {
+      margin-top: 0.8em;
+      border-radius: 5px;
+      padding: 0.7em;
+
+      @include Color.apply('filled', $_usage-theme);
+    }
+
+    h3 {
+      margin: 0 0 .2em;
+      font-weight: 600;
+      color: #f6f598;
+
+      img {
+        margin-left: 0.5em;
+        margin-top: -5px;
+      }
+    }
+
+    .usage {
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      span.usage__text {
+        margin: 0;
+        white-space: pre-line;
+        position: relative;
+      }
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
-
-  .bars {
-    margin: 3em 2em;
-  }
-
-  .bar-left {
-    margin-left: auto !important;
-  }
+.patreon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 </style>

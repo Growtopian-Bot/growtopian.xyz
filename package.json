@@ -21,6 +21,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@growstocks/stack": "^1.4.1-alpha",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",

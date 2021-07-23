@@ -1,0 +1,39 @@
+$_main-theme: (
+  'default': (var(--sc-theme--secondary), #000),
+  'hover': (var(--sc-theme--secondary-dark), #000),
+  'elevation': #000,
+);
+
+$_invite-theme: (
+  'default': (var(--sc-theme--primary), rgb(89, 112, 191)),
+  'hover': (var(--sc-theme--primary-dark), rgb(89, 112, 191)),
+  'elevation': #000,
+);
+
+$_discord-theme: (
+  'default': (var(--sc-theme--discord), #fff),
+  'hover': (var(--sc-theme--discord), #fff),
+  'elevation': #000,
+);
+
+$_patreon-theme: (
+  'default': (var(--sc-theme--patreon), #fff),
+  'hover': (var(--sc-theme--patreon), #fff),
+  'elevation': #000,
+);
+
+$_join-theme: (
+  'default': (var(--sc-theme--join), #000),
+  'hover': (var(--sc-theme--join), #000),
+  'elevation': #000
+);
+
+$_shape-theme: (
+  'shape': pill
+);
+
+$_shape-theme-nav: (
+  'shape': rounded,
+  'border-radius': 5px !important
+);
+
