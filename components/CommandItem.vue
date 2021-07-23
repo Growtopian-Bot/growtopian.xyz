@@ -73,7 +73,7 @@ $_usage-theme: (
 
 .panel {
   &.panel--default {
-    margin-bottom: 0.5em;
+    margin-bottom: .8em;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;

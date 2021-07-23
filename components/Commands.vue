@@ -82,6 +82,7 @@ export default {
   methods: {
     setKey(key) {
       this.$data.List = Commands.categories[key].commands;
+      this.hideAll();
       document.getElementsByClassName("panel-collapse").forEach((e) => {
         e.parentNode.setAttribute("aria-expanded", false);
         e.classList.remove("show");
@@ -164,8 +165,8 @@ h1 {
       color: #fff!important;
 
       .btn--info {
-        padding: 3px;
-        color: inherit!important;
+        padding: .5em 1em !important;
+        color: inherit !important;
         @include Color.apply('outlined', $_tab-theme);
 
         &:hover {
@@ -213,6 +214,10 @@ h1 {
 
     .discord__panel {
       margin-top: 1.2rem;
+
+      @media screen and (max-width: 1072px) {
+        display: none;
+      }
     }
   }
 
