@@ -98,6 +98,7 @@
 
   .text {
     width: 35%;
+    padding: 1em;
   }
 }
 
