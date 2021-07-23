@@ -31,6 +31,7 @@ $secondary:rgb(46, 161, 255);
 a {
   text-decoration: none;
   color: inherit;
+  width: max-content;
 }
 
 body {

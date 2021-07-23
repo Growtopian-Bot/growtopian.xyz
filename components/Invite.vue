@@ -1,14 +1,14 @@
 <template>
   <div class="buttons">
     <Button
-      class="btn btn--discord--outlined"
+      styles="btn btn--discord--outlined"
       path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
       target="_blank"
       label="Add to Server"
       has-logo
     />
     <Button
-      class="btn"
+      styles="btn"
       path="/commands"
       label="Commands"
       is-routed

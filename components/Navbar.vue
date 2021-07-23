@@ -26,9 +26,11 @@
         <hr />
         <ul class="primary-nav">
           <li>
-            <NuxtLink to="/#servers">Public Servers</NuxtLink>
+            <NuxtLink to="/commands">Commands</NuxtLink>
           </li>
-          <li><NuxtLink to="/commands">Commands</NuxtLink></li>
+          <li>
+            <NuxtLink to="/rules">Rules</NuxtLink>
+          </li>
           <li>
             <a href="https://discord.gg/mPKz9gV" target="#">Support Server</a>
           </li>
@@ -38,7 +40,7 @@
         <ul class="secondary-nav">
           <li>
             <Button
-              class="btn btn--patreon"
+              styles="btn btn--patreon"
               target="#"
               label="Patreon"
               path="https://patreon.com/growtopian"
@@ -46,7 +48,7 @@
           </li>
           <li>
             <Button
-              class="btn btn--discord"
+              styles="btn btn--discord"
               target="_blank"
               label="Add To Server"
               path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
@@ -205,8 +207,8 @@ nav {
 .secondary-nav {
   .btn {
     padding: 6px 12px !important;
-    text-decoration: none;
-    margin: 1em auto;
+    text-decoration: none!important;
+    margin: 1em auto!important;
     font-size: 14px;
 
     @include Shape.apply($_shape-theme-nav);

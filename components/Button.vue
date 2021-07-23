@@ -1,18 +1,15 @@
 <template>
 
-  <RouterLink v-if="isRouted" :class="{ styles }" :to="{ path }">
+  <RouterLink v-if="isRouted" :class="styles" :to="{ path }">
     <span>{{ label }}</span>
   </RouterLink>
 
-  <button
-    v-else
-    role="button"
-  >
-    <a :href="path">
-      <img v-if="hasLogo" src="~/assets/discord-logo.svg" alt="discord-logo"/>
-      <span>{{ label }}</span>
-    </a>
-  </button>
+  <a v-else :class="styles" :href="path">
+    <button role="button">
+        <img v-if="hasLogo" src="~/assets/discord-logo.svg" alt="discord-logo"/>
+        <span>{{ label }}</span>
+    </button>
+  </a>
 
 </template>
 
@@ -44,32 +41,42 @@ export default {
 @import '~assets/scss/button-theme';
 
 .btn {
-  width: 100%;
+  width: 100% !important;
   max-width: 300px;
   padding: 12px 16px;
-
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  line-height: 1.5;
-  font-weight: 500;
-
   font-size: 16px;
+
+  display: flex !important;
+  justify-content: center !important;
+  place-items: center !important;
+
+  text-decoration: none;
 
   @include Color.apply('filled', $_main-theme);
   @include Shape.apply($_shape-theme);
-  @include Tools.prefix(transition, all 0.1s ease);
+  @include Tools.prefix(transition, all 0.2s ease);
+
+  button {
+    border: none;
+    font-size: inherit;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 500;
+    color: inherit;
+    background: transparent;
+    transition: inherit;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+  }
 
   &.btn--invite {
     @include Color.apply('filled', $_invite-theme);
@@ -77,6 +84,7 @@ export default {
 
   &.btn--discord {
     @include Color.apply('filled', $_discord-theme);
+    @include Shape.apply($_shape-theme-nav);
 
     &--outlined {
       @include Color.apply('outlined', $_discord-theme);
@@ -85,6 +93,7 @@ export default {
 
   &.btn--patreon {
     @include Color.apply('filled', $_patreon-theme);
+    @include Shape.apply($_shape-theme-nav);
   }
 
   &.btn--join {
@@ -93,11 +102,6 @@ export default {
 
     padding: .375rem .75rem;
     margin: 0;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
   }
 
   span {

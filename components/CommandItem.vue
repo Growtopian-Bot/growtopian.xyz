@@ -34,7 +34,7 @@
     <div class="patreon" v-if="command.patreon">
       <Button
         path="https://patreon.com/join/growtopian"
-        class="btn btn--patreon"
+        styles="btn btn--patreon"
         label="Click to become Patron Now! 🚀"
       />
     </div>

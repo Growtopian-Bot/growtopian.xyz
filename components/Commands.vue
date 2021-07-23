@@ -108,21 +108,7 @@ export default {
 @use '~@growstocks/stack/Core/Color';
 @use '~@growstocks/stack/Core/Elevation';
 
-$_command-theme: (
-  'default': (#2d6187, #fff),
-  'elevation': #000,
-);
-
-$_tab-theme: (
-  'default': (#579ee0, #000),
-  'hover': (#579ee0, #000),
-  'elevation': #000
-);
-
-$_input-theme: (
-  'default': (#153a53, #fff),
-  'elevation': #000,
-);
+@import '../assets/scss/commands-theme';
 
 .command-prefix__card {
   width: calc(100% - 20px);
