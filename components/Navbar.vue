@@ -1,5 +1,7 @@
 <template>
-  <header v-bind:class="'header' + (navMenu ? ' shadow-area' : '')">
+  <header>
+    <div v-if="navMenu" class="shadow" @click="toggleNav"></div>
+
     <div class="cont">
       <NuxtLink class="header__logo" to="/">
         <h1 class="header__title">Growtopian</h1>
@@ -15,16 +17,19 @@
 
       <nav v-bind:class="navMenu ? 'menu-btn' : ''" @click="toggleNav">
         <div class="nav-head">
-        <img
-          id="mobile-exit"
-          class="mobile-menu-exit"
-          src="~/assets/close.png"
-          alt="close menu"
-        />
-        <NuxtLink class="nav-logo" to="/"><h1>Growtopian</h1></NuxtLink>
+          <img
+            id="mobile-exit"
+            class="mobile-menu-exit"
+            src="~/assets/close.png"
+            alt="close menu"
+          />
+          <NuxtLink class="nav-logo" to="/"><h1>Growtopian</h1></NuxtLink>
         </div>
         <hr />
         <ul class="primary-nav">
+          <li>
+            <NuxtLink to="/">Home</NuxtLink>
+          </li>
           <li>
             <NuxtLink to="/commands">Commands</NuxtLink>
           </li>
@@ -69,22 +74,21 @@ export default {
   },
   methods: {
     toggleNav: function () {
-      this.navMenu = !this.navMenu;
+      if (window.matchMedia("(max-width: 1072px)").matches) this.navMenu = !this.navMenu;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 @use '~@growstocks/stack/Core/Elevation';
 @use '~@growstocks/stack/Core/Shape';
 
-@import '~assets/scss/button-theme';
+@import "~assets/scss/button-theme";
 
-.header {
+header {
   background: #009de0;
-  padding: .5em .8em;
+  padding: 0.5em 0.8em;
 
   .header__logo {
     text-decoration: none;
@@ -92,23 +96,12 @@ export default {
     color: white;
 
     .header__title {
-      font-family: 'Hammersmith One', sans-serif !important;
+      font-family: "Hammersmith One", sans-serif !important;
       font-size: 2rem;
       padding: 0;
       margin: 0;
       text-shadow: 3px 3px rgba($color: #000000, $alpha: 0.5);
     }
-  }
-
-  &.shadow-area::after {
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.555);
-    content: "";
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 99;
   }
 
   .cont {
@@ -125,7 +118,6 @@ export default {
     padding: 0;
 
     &.primary-nav {
-
       a {
         color: black;
 
@@ -162,7 +154,7 @@ export default {
 nav {
   position: fixed;
   z-index: 999;
-  width: 70%;
+  width: 70vw;
   height: 100vh;
   right: 0;
   top: 0;
@@ -207,8 +199,8 @@ nav {
 .secondary-nav {
   .btn {
     padding: 6px 12px !important;
-    text-decoration: none!important;
-    margin: 1em auto!important;
+    text-decoration: none !important;
+    margin: 1em 0 !important;
     font-size: 14px;
 
     @include Shape.apply($_shape-theme-nav);
@@ -230,56 +222,71 @@ nav {
   }
 }
 
+.shadow {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.555);
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
 @media only screen and (min-width: 1072px) {
   .mobile-menu-exit,
   .mobile-menu {
     display: none;
   }
 
-  .header {
-    padding: 1em;
+  .secondary-nav .btn {
+    margin: 1em 1em;
   }
 
-  .header li a {
-    padding: 6px 12px;
-    font-size: 18px;
-  }
-
-  .header .cont {
-    display: grid;
-    grid-template-columns: 180px auto;
-    justify-content: unset;
-    align-items: center;
-    width: 90%;
-  }
-
-  .header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: unset;
-    height: auto;
-    width: 100%;
-    padding: 0;
-    background: unset;
-  }
-
-  .header nav ul {
-    display: flex;
-  }
-
-  .header .primary-nav a {
-    font-size: 1em;
-    padding: 0.1em 1em;
-    font-weight: 700;
-  }
-
-  .header ul.primary-nav {
-    margin: 0 auto;
-  }
-
-  .header.shadow-area::after {
+  .shadow {
     display: none;
+  }
+
+  header {
+    padding: 1em;
+
+    .primary-nav a {
+      font-size: 1em;
+      padding: 0.1em 1em;
+      font-weight: 700;
+    }
+
+    li a {
+      padding: 6px 12px;
+      font-size: 18px;
+    }
+
+    .cont {
+      display: grid;
+      grid-template-columns: 180px auto;
+      justify-content: unset;
+      align-items: center;
+      width: 90%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: unset;
+      height: auto;
+      width: 100%;
+      padding: 0;
+      background: unset;
+
+      ul {
+        display: flex;
+      }
+
+      ul.primary-nav {
+        margin: 0 auto;
+      }
+    }
   }
 
   .primary-nav a {

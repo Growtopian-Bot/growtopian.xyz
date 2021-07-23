@@ -88,8 +88,9 @@ body {
   }
 
   p {
-    color: #000;
-    margin-bottom: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 2em 2em;
   }
 
   & > * + * {

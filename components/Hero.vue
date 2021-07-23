@@ -97,6 +97,7 @@ export default {
 
     .hero__motto {
       width: 85%;
+      margin-bottom: 2em;
     }
 
     .hero__icon {
