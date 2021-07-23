@@ -29,9 +29,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import url('https://fonts.cdnfonts.com/css/pf-beausans-pro');
-
-$font-1: 'PF BeauSans Pro', sans-serif;
 
 .jumbotron {
     display: flex;
@@ -68,7 +65,7 @@ $font-1: 'PF BeauSans Pro', sans-serif;
         font-size: 3em;
         max-width: 600px;
         font-weight: 600;
-        font-family: $font-1;
+        font-family: 'Hammersmith One', sans-serif;
     }
 
     @media only screen and (max-width: 880px) {
