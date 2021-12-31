@@ -110,6 +110,10 @@
           "desc": "Work at BFG and earn some gems"
         },
         {
+          "name": "lottery",
+          "desc": "Buy the ticket at shop and get the chance to win all the gems from the lottery!"
+        },
+        {
           "name": "use <item>",
           "desc": "Harvest your providers and consume items, do /items to view providers and items you own"
         },
@@ -204,7 +208,7 @@
         {
           "name": "greeting <disable> or <your message>",
           "desc": "It will be sent to every new user joins to your server",
-          "usage": "It will be sent to every new user joins to your server.\n{user} is replaced with username and {server} is replaced with your server name." 
+          "usage": "It will be sent to every new user joins to your server.\n{user} is replaced with username and {server} is replaced with your server name."
         }
       ]
     },
