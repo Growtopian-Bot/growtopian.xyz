@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{275:function(n,e,t){"use strict";t.r(e);var o={middleware:function(n){(0,n.redirect)("https://patreon.com/join/growtopian")}},r=t(2),component=Object(r.a)(o,(function(){var n=this,e=n.$createElement;return(n._self._c||e)("div",[n._v("Redirecting you now...")])}),[],!1,null,null,null);e.default=component.exports}}]);
