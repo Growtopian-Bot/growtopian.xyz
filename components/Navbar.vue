@@ -56,7 +56,7 @@
               styles="btn btn--discord"
               target="_blank"
               label="Add To Server"
-              path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=8&redirect_uri=https://discord.com/invite/mPKz9gV"
+              path="https://discord.com/oauth2/authorize?client_id=591564657714528266&scope=bot&permissions=277025778752&redirect_uri=https://discord.com/invite/mPKz9gV"
             />
           </li>
         </ul>
